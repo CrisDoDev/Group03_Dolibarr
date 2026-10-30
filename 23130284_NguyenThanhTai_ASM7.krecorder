@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>COMMERCIAL_PROPOSALS</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LOGIN</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/public/demo/index.php#a1profdemoall<datalist><option>https://demo.dolibarr.org/public/demo/index.php#a1profdemoall</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[@id='a1profdemoall']/a/div/div[2]<datalist><option>xpath=//div[@id='a1profdemoall']/a/div/div[2]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=idadherent<datalist><option>id=idadherent</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=iddon<datalist><option>id=iddon</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>xpath=//input[@value='     Start     ']<datalist><option>xpath=//input[@value='     Start     ']</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=password<datalist><option>id=password</option></datalist></td><td>demo</td></tr>
+<tr><td>clickAndWait</td><td>xpath=//input[@value='  Login  ']<datalist><option>xpath=//input[@value='  Login  ']</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/list.php<datalist><option>https://demo.dolibarr.org/comm/propal/list.php</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_ref<datalist><option>name=search_ref</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_PROPOSAL-01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals<datalist><option>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>New commercial proposal<datalist><option>New commercial proposal</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>id=select2-socid-container<datalist><option>id=select2-socid-container</option></datalist></td><td>Select a third party</td></tr>
+<tr><td>verifyValue</td><td>name=duree_validite<datalist><option>name=duree_validite</option></datalist></td><td>15</td></tr>
+<tr><td>verifyElementPresent</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=cancel<datalist><option>name=cancel</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_PROPOSAL-02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals<datalist><option>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=select2-socid-container<datalist><option>id=select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>AAA Company</td></tr>
+<tr><td>sendKeys</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>AAA Company<datalist><option>AAA Company</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-C02</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>AAA Company<datalist><option>AAA Company</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Draft (needs to be validated)<datalist><option>Draft (needs to be validated)</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=div.refid &gt; span.valignmiddle<datalist><option>css=div.refid &gt; span.valignmiddle</option></datalist></td><td>glob:*PROV*</td></tr>
+<tr><td>storeLocation</td><td>url1<datalist><option>url1</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_PROPOSAL-03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals<datalist><option>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Customer' is required<datalist><option>Field 'Customer' is required</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_PROPOSAL-04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals<datalist><option>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=select2-socid-container<datalist><option>id=select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>AAA Company</td></tr>
+<tr><td>sendKeys</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>AAA Company<datalist><option>AAA Company</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=duree_validite<datalist><option>name=duree_validite</option></datalist></td><td>abc</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Validity duration' is required<datalist><option>Field 'Validity duration' is required</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_PROPOSAL-05</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals<datalist><option>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=select2-socid-container<datalist><option>id=select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>AAA Company</td></tr>
+<tr><td>sendKeys</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>AAA Company<datalist><option>AAA Company</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=duree_validite<datalist><option>name=duree_validite</option></datalist></td><td>0</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Validity duration' is required<datalist><option>Field 'Validity duration' is required</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_PROPOSAL-06</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals<datalist><option>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=select2-socid-container<datalist><option>id=select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>AAA Company</td></tr>
+<tr><td>sendKeys</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>AAA Company<datalist><option>AAA Company</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=duree_validite<datalist><option>name=duree_validite</option></datalist></td><td>-1</td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-C06</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=duree_validite<datalist><option>name=duree_validite</option></datalist></td><td></td></tr>
+<tr><td>verifyTextNotPresent</td><td>Draft (needs to be validated)<datalist><option>Draft (needs to be validated)</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_PROPOSAL-07</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals<datalist><option>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=select2-socid-container<datalist><option>id=select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>AAA Company</td></tr>
+<tr><td>sendKeys</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>AAA Company<datalist><option>AAA Company</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=duree_validite<datalist><option>name=duree_validite</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-C07</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>AAA Company<datalist><option>AAA Company</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Draft (needs to be validated)<datalist><option>Draft (needs to be validated)</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_PROPOSAL-08</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/list.php<datalist><option>https://demo.dolibarr.org/comm/propal/list.php</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>countBefore</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals<datalist><option>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=cancel<datalist><option>name=cancel</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_ref<datalist><option>name=search_ref</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>name=duree_validite<datalist><option>name=duree_validite</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>${countBefore}</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_LINE-01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Type' is required<datalist><option>Field 'Type' is required</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Description' is required<datalist><option>Field 'Description' is required</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_LINE-02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 line 1');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 line 1');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130284 line 1<datalist><option>QA23130284 line 1</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>120.00<datalist><option>120.00</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=validate']<datalist><option>css=a.butAction[href*='action=validate']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_LINE-03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 qty -1');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 qty -1');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>-1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Qty' cannot be negative<datalist><option>Field 'Qty' cannot be negative</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 qty -1')]<datalist><option>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 qty -1')]</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_LINE-04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 qty abc');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 qty abc');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>abc</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 qty abc')]<datalist><option>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 qty abc')]</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_LINE-05</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 discount 10');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 discount 10');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>10</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130284 discount 10<datalist><option>QA23130284 discount 10</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>10%<datalist><option>10%</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>90.00<datalist><option>90.00</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_LINE-06</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 discount 101');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 discount 101');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>101</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 discount 101')]<datalist><option>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 discount 101')]</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_LINE-07</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 discount -1');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 discount -1');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>-1</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 discount -1')]<datalist><option>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 discount -1')]</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_LINE-08</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals<datalist><option>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=select2-socid-container<datalist><option>id=select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>AAA Company</td></tr>
+<tr><td>sendKeys</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>AAA Company<datalist><option>AAA Company</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-L08</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 line 1');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 line 1');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 line 2');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 line 2');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>200</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=10%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>220.00<datalist><option>220.00</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>300.00<datalist><option>300.00</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>40.00<datalist><option>40.00</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>340.00<datalist><option>340.00</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_STATUS-01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals<datalist><option>https://demo.dolibarr.org/comm/propal/card.php?action=create&amp;leftmenu=propals</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=select2-socid-container<datalist><option>id=select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>AAA Company</td></tr>
+<tr><td>sendKeys</td><td>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown &gt; input.select2-search__field</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>AAA Company<datalist><option>AAA Company</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-S01</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>url2<datalist><option>url2</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>css=a.butAction[href*='action=validate']<datalist><option>css=a.butAction[href*='action=validate']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=clone']<datalist><option>css=a.butAction[href*='action=clone']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=delete']<datalist><option>css=a.butAction[href*='action=delete']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 status line');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 status line');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=validate']<datalist><option>css=a.butAction[href*='action=validate']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=clone']<datalist><option>css=a.butAction[href*='action=clone']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=delete']<datalist><option>css=a.butAction[href*='action=delete']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_STATUS-02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=validate']<datalist><option>css=a.butAction[href*='action=validate']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Are you sure you want to validate this commercial proposal under name<datalist><option>Are you sure you want to validate this commercial proposal under name</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No automatic email notifications are planned for this event type and company<datalist><option>No automatic email notifications are planned for this event type and company</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='No']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='No']</option></datalist></td><td></td></tr>
+<tr><td>verifyNotVisible</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='No']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='No']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Draft (needs to be validated)<datalist><option>Draft (needs to be validated)</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=div.refid &gt; span.valignmiddle<datalist><option>css=div.refid &gt; span.valignmiddle</option></datalist></td><td>glob:*PROV*</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_STATUS-03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=validate']<datalist><option>css=a.butAction[href*='action=validate']</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Validated (proposal is open)<datalist><option>Validated (proposal is open)</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=div.refid &gt; span.valignmiddle<datalist><option>css=div.refid &gt; span.valignmiddle</option></datalist></td><td>glob:PR*</td></tr>
+<tr><td>storeText</td><td>css=div.refid &gt; span.valignmiddle<datalist><option>css=div.refid &gt; span.valignmiddle</option></datalist></td><td>ref1</td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=modif']<datalist><option>css=a.butAction[href*='action=modif']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=closeas']<datalist><option>css=a.butAction[href*='action=closeas']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=cancel']<datalist><option>css=a.butAction[href*='action=cancel']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=clone']<datalist><option>css=a.butAction[href*='action=clone']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=delete']<datalist><option>css=a.butAction[href*='action=delete']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_STATUS-04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=modif']<datalist><option>css=a.butAction[href*='action=modif']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Draft (needs to be validated)<datalist><option>Draft (needs to be validated)</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>${ref1}<datalist><option>${ref1}</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=validate']<datalist><option>css=a.butAction[href*='action=validate']</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Validated (proposal is open)<datalist><option>Validated (proposal is open)</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>${ref1}<datalist><option>${ref1}</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_STATUS-05</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=closeas']<datalist><option>css=a.butAction[href*='action=closeas']</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Set status to' is required<datalist><option>Field 'Set status to' is required</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Validated (proposal is open)<datalist><option>Validated (proposal is open)</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_STATUS-06</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=closeas']<datalist><option>css=a.butAction[href*='action=closeas']</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=statut<datalist><option>id=statut</option></datalist></td><td>label=Not signed</td></tr>
+<tr><td>type</td><td>css=.ui-dialog #note_private<datalist><option>css=.ui-dialog #note_private</option></datalist></td><td>QA23130284 not signed</td></tr>
+<tr><td>clickAndWait</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Not signed (closed)<datalist><option>Not signed (closed)</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=cancel']<datalist><option>css=a.butAction[href*='action=cancel']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=clone']<datalist><option>css=a.butAction[href*='action=clone']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=delete']<datalist><option>css=a.butAction[href*='action=delete']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_STATUS-07</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url2}<datalist><option>${url2}</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=validate']<datalist><option>css=a.butAction[href*='action=validate']</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.refid &gt; span.valignmiddle<datalist><option>css=div.refid &gt; span.valignmiddle</option></datalist></td><td>ref2</td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=closeas']<datalist><option>css=a.butAction[href*='action=closeas']</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=statut<datalist><option>id=statut</option></datalist></td><td>label=Signed</td></tr>
+<tr><td>type</td><td>css=.ui-dialog #note_private<datalist><option>css=.ui-dialog #note_private</option></datalist></td><td>QA23130284 signed</td></tr>
+<tr><td>clickAndWait</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Signed (needs billing)<datalist><option>Signed (needs billing)</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>css=a.butAction[href*='action=modif']<datalist><option>css=a.butAction[href*='action=modif']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a[href*='/commande/card.php?action=create']<datalist><option>css=a[href*='/commande/card.php?action=create']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a[href*='action=classifybilled']<datalist><option>css=a[href*='action=classifybilled']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=cancel']<datalist><option>css=a.butAction[href*='action=cancel']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=clone']<datalist><option>css=a.butAction[href*='action=clone']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_STATUS-08</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url1}<datalist><option>${url1}</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=cancel']<datalist><option>css=a.butAction[href*='action=cancel']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Are you sure you want to cancel commercial proposal ${ref1}<datalist><option>Are you sure you want to cancel commercial proposal ${ref1}</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Canceled (Abandoned)<datalist><option>Canceled (Abandoned)</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=clone']<datalist><option>css=a.butAction[href*='action=clone']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=delete']<datalist><option>css=a.butAction[href*='action=delete']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">PROPOSAL_STATUS-09</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${url2}<datalist><option>${url2}</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=clone']<datalist><option>css=a.butAction[href*='action=clone']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>id=update_prices<datalist><option>id=update_prices</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>id=update_desc<datalist><option>id=update_desc</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Draft (needs to be validated)<datalist><option>Draft (needs to be validated)</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130284 status line<datalist><option>QA23130284 status line</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>120.00<datalist><option>120.00</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_PROPOSAL-01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/list.php<datalist><option>https://demo.dolibarr.org/comm/propal/list.php</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=button_removefilter_x<datalist><option>name=button_removefilter_x</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_ref<datalist><option>name=search_ref</option></datalist></td><td>${ref2}</td></tr>
+<tr><td>clickAndWait</td><td>name=button_search_x<datalist><option>name=button_search_x</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>(1)</td></tr>
+<tr><td>verifyText</td><td>css=table.liste tr.oddeven<datalist><option>css=table.liste tr.oddeven</option></datalist></td><td>glob:*${ref2}*AAA Company*Signed*</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_PROPOSAL-02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/list.php<datalist><option>https://demo.dolibarr.org/comm/propal/list.php</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=button_removefilter_x<datalist><option>name=button_removefilter_x</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_ref<datalist><option>name=search_ref</option></datalist></td><td>ZZZ-NO-SUCH-REF</td></tr>
+<tr><td>clickAndWait</td><td>name=button_search_x<datalist><option>name=button_search_x</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>(0)</td></tr>
+<tr><td>verifyTextPresent</td><td>No record found<datalist><option>No record found</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_PROPOSAL-03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/list.php<datalist><option>https://demo.dolibarr.org/comm/propal/list.php</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=button_removefilter_x<datalist><option>name=button_removefilter_x</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_ref<datalist><option>name=search_ref</option></datalist></td><td>${ref2}</td></tr>
+<tr><td>select</td><td>id=search_status<datalist><option>id=search_status</option></datalist></td><td>label=Signed</td></tr>
+<tr><td>clickAndWait</td><td>name=button_search_x<datalist><option>name=button_search_x</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>(1)</td></tr>
+<tr><td>select</td><td>id=search_status<datalist><option>id=search_status</option></datalist></td><td>label=Not signed</td></tr>
+<tr><td>clickAndWait</td><td>name=button_search_x<datalist><option>name=button_search_x</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>(0)</td></tr>
+<tr><td>select</td><td>id=search_status<datalist><option>id=search_status</option></datalist></td><td>label=Billed</td></tr>
+<tr><td>clickAndWait</td><td>name=button_search_x<datalist><option>name=button_search_x</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>(0)</td></tr>
+<tr><td>select</td><td>id=search_status<datalist><option>id=search_status</option></datalist></td><td>index=0</td></tr>
+<tr><td>type</td><td>name=search_montant_ht<datalist><option>name=search_montant_ht</option></datalist></td><td>100</td></tr>
+<tr><td>clickAndWait</td><td>name=button_search_x<datalist><option>name=button_search_x</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>(1)</td></tr>
+<tr><td>type</td><td>name=search_montant_ht<datalist><option>name=search_montant_ht</option></datalist></td><td>999</td></tr>
+<tr><td>clickAndWait</td><td>name=button_search_x<datalist><option>name=button_search_x</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>(0)</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_PROPOSAL-04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/comm/propal/list.php<datalist><option>https://demo.dolibarr.org/comm/propal/list.php</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=button_removefilter_x<datalist><option>name=button_removefilter_x</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_ref<datalist><option>name=search_ref</option></datalist></td><td>${ref1}</td></tr>
+<tr><td>clickAndWait</td><td>name=button_search_x<datalist><option>name=button_search_x</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=table.liste tr.oddeven<datalist><option>css=table.liste tr.oddeven</option></datalist></td><td>glob:*${ref1}*Canceled*</td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//select[@id='search_status']/option[normalize-space()='Canceled']<datalist><option>xpath=//select[@id='search_status']/option[normalize-space()='Canceled']</option></datalist></td><td></td></tr>
+</tbody></table>
+</body>
+</html>
