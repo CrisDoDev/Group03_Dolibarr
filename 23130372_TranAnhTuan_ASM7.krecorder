@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>23130372_TranAnhTuan_ASM7_Contacts</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SETUP_LOGIN</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/user/logout.php<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/public/demo/index.php<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=a1profdemoall<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#a1profdemoall a.modulelineshow<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForVisible</td><td>css=#formprofdemoall input[type=submit]<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#formprofdemoall input[type=submit]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=username<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=username<datalist></datalist></td><td>demo</td></tr>
+<tr><td>type</td><td>id=password<datalist></datalist></td><td>demo</td></tr>
+<tr><td>click</td><td>css=input.butActionLogin<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//a[contains(@href,'logout.php')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>id=username<datalist></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>return String(Date.now()).slice(-6);<datalist></datalist></td><td>run</td></tr>
+<tr><td>echo</td><td>RUN ID = ${run}<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C01-${run}</td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-C01-${run}<datalist></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>urlC01<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=selectcountry_id<datalist></datalist></td><td>label=Vietnam (VN)</td></tr>
+<tr><td>pause</td><td>2000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=socid<datalist></datalist></td><td>index=1</td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C02-${run}</td></tr>
+<tr><td>type</td><td>id=firstname<datalist></datalist></td><td>Anh</td></tr>
+<tr><td>type</td><td>id=title<datalist></datalist></td><td>QA Engineer</td></tr>
+<tr><td>type</td><td>id=address<datalist></datalist></td><td>12 Nguyen Hue</td></tr>
+<tr><td>type</td><td>id=zipcode<datalist></datalist></td><td>700000</td></tr>
+<tr><td>type</td><td>id=town<datalist></datalist></td><td>Ho Chi Minh</td></tr>
+<tr><td>type</td><td>id=phone_pro_input<datalist></datalist></td><td>0281234567</td></tr>
+<tr><td>type</td><td>id=phone_mobile_input<datalist></datalist></td><td>0901234567</td></tr>
+<tr><td>type</td><td>id=email<datalist></datalist></td><td>qa.c02.${run}@example.com</td></tr>
+<tr><td>select</td><td>id=priv<datalist></datalist></td><td>label=Shared</td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-C02-${run}<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA Engineer<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>12 Nguyen Hue<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Ho Chi Minh<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>qa.c02.${run}@example.com<datalist></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>urlC02<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=firstname<datalist></datalist></td><td>NoLastName</td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Last name / Label' is required<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=add<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>     </td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>is required<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=add<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-05</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C05-${run}</td></tr>
+<tr><td>type</td><td>id=email<datalist></datalist></td><td>qa.test@</td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Email address qa.test@ is incorrect<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=add<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-06</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C06-${run}</td></tr>
+<tr><td>type</td><td>id=email<datalist></datalist></td><td>qa.tran+test${run}@example.com</td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>qa.tran+test${run}@example.com<datalist></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>urlC06<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-07</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C07-${run}-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</td></tr>
+<tr><td>verifyValue</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C07-${run}-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextNotPresent</td><td>Data too long<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-C07-${run}-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-08</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C08-${run}-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBX</td></tr>
+<tr><td>verifyValue</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C08-${run}-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextNotPresent</td><td>Data too long<datalist><option>Data too long</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-C08-${run}-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB<datalist><option>QA23130372-C08-${run}-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</option></datalist></td><td></td></tr>
+<tr><td></td><td><datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-09</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C09-${run}-Trần</td></tr>
+<tr><td>type</td><td>id=firstname<datalist></datalist></td><td>Ánh Tuấn</td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-C09-${run}-Trần<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Ánh Tuấn<datalist></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>urlC09<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_lastname<datalist></datalist></td><td>C09-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C09-${run}-Trần')]<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-10</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>store</td><td>QA23130372-C10-${run}alert(1)<datalist></datalist></td><td>lnC10</td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>${lnC10}</td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>2000<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//script[contains(.,'alert(1)')]<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_lastname<datalist></datalist></td><td>C10-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//script[contains(.,'alert(1)')]<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-11</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=socid<datalist></datalist></td><td>index=1</td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C11-${run}</td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>urlC11<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[@id='id-right']//a[contains(@href,'societe/contact.php?socid=')])[1]<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[@id='id-right']//a[contains(@href,'societe/contact.php?socid=')])[1]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>tpAContacts<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C11-${run}')]<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-12</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=firstname<datalist></datalist></td><td>Recovery</td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>is required<datalist></datalist></td><td></td></tr>
+<tr><td>verifyValue</td><td>id=firstname<datalist></datalist></td><td>Recovery</td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C12-${run}</td></tr>
+<tr><td>click</td><td>name=add<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-C12-${run}<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Recovery<datalist></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>urlC12<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_lastname<datalist></datalist></td><td>C12-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyXpathCount</td><td>//a[contains(normalize-space(),'QA23130372-C12-${run}')]<datalist></datalist></td><td>1</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_CONTACT-13</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/card.php?leftmenu=contacts&action=create<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C13-${run}</td></tr>
+<tr><td>click</td><td>name=cancel<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_lastname<datalist></datalist></td><td>C13-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_CONTACT-01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Contacts/Addresses<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_firstname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_phone_pro<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_phone_mobile<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_email<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_societe<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_priv<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_status<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=table.liste<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_CONTACT-02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_lastname<datalist></datalist></td><td>QA23130372-C01-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C01-${run}')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C02-${run}')]<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_CONTACT-03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_email<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_email<datalist></datalist></td><td>qa.c02.${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_email<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C02-${run}')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C01-${run}')]<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_CONTACT-04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_lastname<datalist></datalist></td><td>ZZZ-NO-MATCH-999</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_CONTACT-05</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${urlC02}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>${urlC02}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-C02-${run}<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA Engineer<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>12 Nguyen Hue<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Ho Chi Minh<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>qa.c02.${run}@example.com<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">EDIT_CONTACT-01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${urlC02}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save<datalist></datalist></td><td></td></tr>
+<tr><td>verifyValue</td><td>id=lastname<datalist></datalist></td><td>QA23130372-C02-${run}</td></tr>
+<tr><td>verifyValue</td><td>id=firstname<datalist></datalist></td><td>Anh</td></tr>
+<tr><td>verifyValue</td><td>id=title<datalist></datalist></td><td>QA Engineer</td></tr>
+<tr><td>verifyValue</td><td>id=email<datalist></datalist></td><td>qa.c02.${run}@example.com</td></tr>
+<tr><td>verifyElementPresent</td><td>name=cancel<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>name=cancel<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">EDIT_CONTACT-02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${urlC01}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>QA23130372-U02-${run}</td></tr>
+<tr><td>type</td><td>id=title<datalist></datalist></td><td>Tester</td></tr>
+<tr><td>click</td><td>name=save<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>${urlC01}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-U02-${run}<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Tester<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save<datalist></datalist></td><td></td></tr>
+<tr><td>verifyValue</td><td>id=lastname<datalist></datalist></td><td>QA23130372-U02-${run}</td></tr>
+<tr><td>verifyValue</td><td>id=title<datalist></datalist></td><td>Tester</td></tr>
+<tr><td>click</td><td>name=cancel<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">EDIT_CONTACT-03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${urlC11}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save<datalist></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=socid<datalist></datalist></td><td>index=2</td></tr>
+<tr><td>click</td><td>name=save<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[@id='id-right']//a[contains(@href,'societe/contact.php?socid=')])[1]<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[@id='id-right']//a[contains(@href,'societe/contact.php?socid=')])[1]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>tpBContacts<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C11-${run}')]<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>${tpAContacts}<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C11-${run}')]<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">EDIT_CONTACT-04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${urlC06}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>name=save<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>is required<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>${urlC06}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-C06-${run}<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">EDIT_CONTACT-05</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${urlC06}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=email<datalist></datalist></td><td>qa@@example</td></tr>
+<tr><td>click</td><td>name=save<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>is incorrect<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>${urlC06}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>qa.tran+test${run}@example.com<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">EDIT_CONTACT-06</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${urlC06}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=lastname<datalist></datalist></td><td>NOT-SAVED</td></tr>
+<tr><td>click</td><td>name=cancel<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-C06-${run}<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextNotPresent</td><td>NOT-SAVED<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">EDIT_CONTACT-07</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${urlC09}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//a[contains(@href,'action=disable')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//a[contains(@href,'action=enable')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(@href,'action=disable')]<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//a[contains(@href,'action=enable')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//a[contains(@href,'action=disable')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(@href,'action=enable')]<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">DELETE_CONTACT-01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${urlC12}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Delete a contact/address<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Are you sure you want to delete this contact?<datalist></datalist></td><td></td></tr>
+<tr><td>verifyVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']<datalist></datalist></td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">DELETE_CONTACT-02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${urlC12}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_lastname<datalist></datalist></td><td>C12-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C12-${run}')]<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">DELETE_CONTACT-03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${urlC12}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_lastname<datalist></datalist></td><td>C12-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">DELETE_CONTACT-04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${urlC11}&t=1<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete')]<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>${tpBContacts}<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//div[contains(@class,'tabs')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C11-${run}')]<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">DELETE_CONTACT-05</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_lastname<datalist></datalist></td><td>${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//tr[.//a[contains(normalize-space(),'QA23130372-C06-${run}')]]//input[contains(@class,'checkforselect')]<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//tr[.//a[contains(normalize-space(),'QA23130372-C09-${run}')]]//input[contains(@class,'checkforselect')]<datalist></datalist></td><td></td></tr>
+<tr><td>select</td><td>name=massaction<datalist></datalist></td><td>label=Delete</td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForVisible</td><td>name=confirmmassaction<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>name=confirmmassaction<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=confirm<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Bulk Delete confirmation<datalist></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=confirm<datalist></datalist></td><td>label=Yes</td></tr>
+<tr><td>click</td><td>css=input.confirmvalidatebutton<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>2 record(s) deleted<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_lastname<datalist></datalist></td><td>${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C06-${run}')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C09-${run}')]<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-C02-${run}')]<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">TEARDOWN_CONTACT</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_lastname<datalist></datalist></td><td>${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=checkforselects<datalist></datalist></td><td></td></tr>
+<tr><td>select</td><td>name=massaction<datalist></datalist></td><td>label=Delete</td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForVisible</td><td>name=confirmmassaction<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>name=confirmmassaction<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=confirm<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Bulk Delete confirmation<datalist></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=confirm<datalist></datalist></td><td>label=Yes</td></tr>
+<tr><td>click</td><td>css=input.confirmvalidatebutton<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right<datalist></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contact/list.php?leftmenu=contacts<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_lastname<datalist></datalist></td><td>${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_lastname<datalist></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found<datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">TEARDOWN_LOGOUT</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/user/logout.php<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>2000<datalist></datalist></td><td></td></tr>
+<tr><td>echo</td><td>Finished RUN ID = ${run}<datalist></datalist></td><td></td></tr>
+</tbody></table>
+</body>
+</html>
