@@ -1,0 +1,3196 @@
+{
+  "id": "1ae0c946-3eca-44c1-914f-20ace09865a5",
+  "version": "2.0",
+  "name": "23130094_BuiAnhHau_ASM7",
+  "url": "https://demo.dolibarr.org",
+  "tests": [
+    {
+      "id": "a1e35cae-4207-4493-8aa0-34ed53d0e6cc",
+      "name": "CONTRACT_Setup_01",
+      "commands": [
+        {
+          "id": "1eacf05b-b59b-495d-bf74-16aebd9f9e01",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/public/demo/index.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "693f22e7-928e-4ca7-9076-bc066959604b",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//form[.//input[@type='checkbox']]//input[@type='submit'])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "773b02a4-7dde-48fe-a903-9c4071874931",
+          "comment": "",
+          "command": "pause",
+          "target": "8000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e46e1bc9-ef8e-4759-a3ef-a039078e3bd1",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/index.php?mainmenu=home&leftmenu=",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b5ff24f5-323c-4c20-b08f-fb4c58663caf",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a[href*='mainmenu=commercial']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "c25fb459-d9eb-4be0-9bc8-c6ad0e86e7ba",
+      "name": "CONTRACT_Create_01",
+      "commands": [
+        {
+          "id": "015efc0f-c8ab-4701-96bf-97a06e152445",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1c34b85c-aa49-4a9f-b631-721d552d0506",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='/contrat/card.php?action=create']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fe38824d-c1a3-401a-8884-d0c72e4719e1",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "0941b6e6-e505-406b-9119-3069359e5803",
+      "name": "CONTRACT_Create_02",
+      "commands": [
+        {
+          "id": "2cf48259-3aca-47e4-acf5-6581ae3ce12a",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "55dc06b4-39d7-46b6-a197-7cd64a672b31",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "623b2157-2947-4ef6-8e11-7325f49fd1b1",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "Bên thứ ba",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "049a4294-6f63-49c3-91ab-01903b0ee669",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "Đại diện bán hàng theo dõi hợp đồng",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "93863039-e01c-448a-8926-d5b10e624a75",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "Đại diện bán hàng ký hợp đồng",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "041f76a3-0421-4b71-9411-2d6baa6fffc8",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "Ngày",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a89bda30-a4cf-4ac9-9659-d6b39ea45eae",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "Dự án",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "df213b2c-84c5-49e8-a2d0-1f9c0722a0ac",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "Ghi chú (công khai)",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d6b5ec41-0e8e-4a8c-b3c0-d603a070d32b",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "Note (internal)",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1b762ecb-8728-45ab-8f20-4b28a104fe5e",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "399964a2-2631-4370-ae01-7fbf6896e883",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=input.button-cancel",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "017575f4-3369-429c-9521-af7b5248df65",
+      "name": "CONTRACT_Create_03",
+      "commands": [
+        {
+          "id": "0da13d64-d279-410b-9909-45f2e97ec411",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d100f11c-c4a0-4735-9fca-6813c0d0827c",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "33fd034f-16c7-4c31-b5d2-81d35e4d1e62",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b1c475e1-6ae4-43c1-9ab8-f3c3b5bf1cd5",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "b843c050-58c7-451f-9d3d-4f46a86828d4",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f3216a1a-bd45-4636-8a83-3af980466fc6",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2fb298fc-f96f-4ceb-b1c0-65ca8f73be7b",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7fbaa48e-066d-4851-b748-a098a1e93674",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "20f30fd7-5d68-4ce7-b1d5-a7a4e159dfcf",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b8260fe7-6973-4aac-95e3-5de222f855bb",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "62ec4092-a154-4f2f-bfee-5a207ef02b8c",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "Testldr1",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4dafd934-e79d-47ac-8cc4-47f05d9d77d4",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "815672eb-b639-49e6-81cc-2fd071096858",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "91f1c0f2-ea43-4948-8905-d7b32effaab8",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a38e9d46-ce81-4a6f-bf66-0f966d03a833",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2a7ab1c8-a8c1-437f-bd90-5d3e7e589611",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "8c0a6896-05f0-440b-a418-f5e537d5fe66",
+      "name": "CONTRACT_Create_04",
+      "commands": [
+        {
+          "id": "31a9130c-1ff3-408b-8515-b49adfc6656e",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2296fb26-5fb5-428e-88ce-e7b377ab78b5",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "47c6f197-4d5c-48f7-9405-22ba1f284b99",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4d175fba-da20-4c86-809e-17ed058b2db9",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "3aacb9ce-fc8e-443f-85bd-e90f5805b68f",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "35949300-f27a-49e4-9933-cc4a82c65412",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a6c734d1-0836-4761-91c2-3d17cc390725",
+          "comment": "",
+          "command": "type",
+          "target": "css=textarea[name='note_private']",
+          "targets": [],
+          "value": "Internal note 01"
+        },
+        {
+          "id": "4057b679-359f-451d-808b-3c83eeb289d7",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "944048ba-fe95-444c-953d-51aa9f119aab",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7364cc2e-3c1d-490b-b7d2-02f9330637e6",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1d33b38b-89f5-4d65-bfef-36d78855c269",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='/contrat/note.php']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "26db5ede-3e4a-4a36-90ad-0cfedf4c18f7",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "Internal note 01",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f0955ea0-a700-43c3-aa89-2d4fc61177da",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d0152a5d-2568-48c5-92fa-23ac53868e7b",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5eda9f36-52d4-4abb-aff6-6d7f2724ecea",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b80c84ac-54b4-4adc-9db9-9eeed35448bc",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0aa7328d-f911-40b8-b116-08d36638f399",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "a85a3029-7d2b-4d10-8107-c4c3c509256e",
+      "name": "CONTRACT_Create_05",
+      "commands": [
+        {
+          "id": "22d2f00c-6038-408f-ab57-6ce078d50fa9",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "db4383a9-98ca-45d9-9458-fcb04d67a256",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c955f5bd-59e2-45cb-968d-d75fa6d9465f",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a59bf09d-0238-4e9a-999b-235071ae2d46",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "Cần khai báo trường",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8ff383c5-1dd4-462b-80df-9f3d7663b14a",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "Bên thứ ba",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "18fcd07a-5c8f-4c8e-9639-da6782311f81",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "Hợp đồng mới",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "0e19408b-8d0e-4016-a295-ae46fd6f2e52",
+      "name": "CONTRACT_Create_06",
+      "commands": [
+        {
+          "id": "1786f5c0-e9ec-407a-8fe2-d5cf8c63a8ad",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6b33d158-60f9-4f9a-8d39-fbf994bed6af",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "470fa4fc-21e5-4fff-a44a-e0835ce4f796",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e7162a91-74ad-4d04-b8d3-d07066103d90",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "a5941757-86bf-4f28-a81d-e4214ae63822",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a99bf8cd-c3f1-4cd7-a602-bdf7b5e713f8",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7f712c75-db7e-4c71-b470-e71f9433e1fb",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4fe8a28b-6b73-489f-9671-9f6703a039a4",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2381f863-d23e-4e5e-a8cd-8a6d4715e20e",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7d610041-3bde-4406-b9aa-db69ef371512",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]",
+          "targets": [],
+          "value": "contractRef"
+        },
+        {
+          "id": "b29f8347-ece5-4a86-a035-eae08f0a1375",
+          "comment": "",
+          "command": "storeEval",
+          "target": "'${contractRef}'.match(/\\(PROV\\d+\\)/)[0]",
+          "targets": [],
+          "value": "contractRef"
+        },
+        {
+          "id": "215a91f9-bf00-4a2f-8e45-afc8aa457cbd",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c2f8d9ae-6b1b-451b-9fae-bb09d382496b",
+          "comment": "",
+          "command": "storeEval",
+          "target": "'${contractRef}'.replace(/[()]/g,'')",
+          "targets": [],
+          "value": "searchRef"
+        },
+        {
+          "id": "901e8966-3fb1-496d-877b-174d40e1e60f",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": "${searchRef}"
+        },
+        {
+          "id": "4d1fb0f1-038b-4a2d-b66e-c7e7e742fdbc",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "f04a7448-9cd5-4cae-aa1b-b720eaf9ed20",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4ed4210f-f1b3-4ccd-ad8c-0f8ad322170b",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "${contractRef}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b165285e-4468-413a-a026-e0ae53abc62b",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "link=${contractRef}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4f28e948-dae9-4946-8afd-b2138a27ab79",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6445b592-349d-4956-9a32-0cb1ddd68a37",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "aea43923-7be5-4929-9257-f73b4a470308",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0fa813db-038c-4f1a-9140-228c2c64e58c",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5b2b1dd7-0c51-442b-a955-2c333b684e6d",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "822ac0c2-4996-416e-ac43-7fbd804683e2",
+      "name": "CONTRACT_Create_07",
+      "commands": [
+        {
+          "id": "fd9d9c8b-a201-49c9-a684-ce9c6f963e59",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "580f3b11-1327-4eb8-9337-4686aa1b0373",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countBefore"
+        },
+        {
+          "id": "80a356c8-2eb8-4a7f-8669-f519b0023dad",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='/contrat/card.php?action=create']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f63804f8-a202-41d6-a47d-1088d637cef7",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "38eb7488-7656-435e-943b-dd3b2f330bbf",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8afca754-5dd0-4999-a7bc-534ad4f1e342",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "4243273a-e2fa-4148-9bed-ed8a1cfa1c38",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "aaa388d2-0194-45e5-bbdd-72cb13243393",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6b345b25-6ae3-4a14-9e41-8cdc1890e07a",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-cancel",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1643e091-e8c9-4136-a2e3-aab14fa70838",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "588ede22-5927-40c0-bb2b-2a9111ace60d",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5f64f277-3e6c-4c03-99af-a0819a8480d7",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countAfter"
+        },
+        {
+          "id": "db252c1e-5985-418b-a4fb-83f08786af8c",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${countBefore}' == '${countAfter}'",
+          "targets": [],
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "id": "a6940e8f-5f64-4cbb-8183-457915efb10c",
+      "name": "CONTRACT_Create_08",
+      "commands": [
+        {
+          "id": "835d0f16-12ee-4391-8d76-3696276078f5",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b6072d35-c684-43e8-a2ee-1fbbdf16af87",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countBefore"
+        },
+        {
+          "id": "96ec55b6-813d-4ec8-a6af-32a1e35a7737",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "93e03e2d-2d10-4c49-a61a-e5613995c00e",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4a77bddc-55f7-469d-8c68-68659338f019",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6f8f1ab4-8d9e-40d2-9acf-a100af9d4333",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "e0ca6043-cbf3-458d-af6f-27a5f46cae88",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "44e2bb66-277e-4411-b8b8-f9483a5ca661",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "87c80352-7480-46c7-b1f5-704fdff12e3a",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a46476a6-ce3c-417e-909e-e057e56d3a68",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b197c2a6-a4cb-4e10-9091-d837dc458334",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl1",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f35b9f1f-ac40-41b8-ad57-83193fd591f8",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b71c5712-bfc6-4ec6-b919-49a0dddb100d",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9be82826-7d54-430e-a6b2-8e720603475d",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1ea27377-3c04-40f8-bed4-9323cdf9f185",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "d15a5f33-15b7-4d74-8e94-067affabcafd",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a286de45-3215-465c-8e4d-ac4c47626c81",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7e8bb92c-5507-4811-851b-42ec8fd355e8",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9ebc55d0-5344-4ee4-9275-8b4b7fcf0177",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fd90e728-e1a3-474b-8160-187f4eb6660f",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl2",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "004b0252-1d64-4c06-a813-10d1f78ed2b9",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8167c095-e404-42e3-a9ec-759e01462577",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countAfter"
+        },
+        {
+          "id": "051ca9de-1383-4c8e-87a6-4938f0ca1f6a",
+          "comment": "",
+          "command": "storeEval",
+          "target": "parseInt('${countBefore}'.match(/\\((\\d+)\\)/)[1]) + 2",
+          "targets": [],
+          "value": "expected"
+        },
+        {
+          "id": "cc9a2887-2edc-490c-8003-de5d876b2e4a",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${countAfter}'.indexOf('(' + ${expected} + ')') >= 0",
+          "targets": [],
+          "value": "true"
+        },
+        {
+          "id": "833e3a1b-f46f-4d2d-8b88-12b3570a2730",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl1}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "688df88f-e0e7-44bd-857b-9958ef276f8f",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8b7fe87b-8937-4e7b-aea2-f3845eef92bc",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9529e60d-dce9-4034-a556-44f5ccc77689",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "50ee77cd-0d56-4c71-9646-e6b1461836b3",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1b799673-6055-4b91-b0af-c127348192a5",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl2}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "85d11b53-9a01-4147-bfc5-8949459b9b1c",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "615dd0c3-5c56-482b-8a25-11426141cbcf",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bf7262ad-3f5d-4e8b-bde8-a80a00e14fb9",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "76ab22a3-4773-44fa-9437-fad8fca70cdd",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "25d64822-7b6e-4058-b649-ad745709c1ef",
+      "name": "CONTRACT_Create_09",
+      "commands": [
+        {
+          "id": "b1853f72-01b0-4598-ac4c-546aa0e98bb1",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "621d350e-ce42-4f7c-ab94-87bafc0b1f9b",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e8f6560e-49d5-48c8-a2ba-99c810e96960",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ade032bd-e4df-4949-b937-3f79a33187a3",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "ba330d10-540a-4069-a389-ea3d2d146c50",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "30adf8f6-92cb-4e86-bc56-d56eb48a1ae6",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3cb4c875-6c2b-4d8b-a05d-26a62efedd33",
+          "comment": "",
+          "command": "type",
+          "target": "css=input#re",
+          "targets": [],
+          "value": "01/01/2026"
+        },
+        {
+          "id": "060d844f-a9e8-4003-a5af-f8352ef73460",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input#re",
+          "targets": [],
+          "value": "${KEY_TAB}"
+        },
+        {
+          "id": "ee574c70-5d1c-4119-8108-3aef239ab19e",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c43b395e-992d-4029-9fbd-d4a57f6c6445",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ba737ff5-a7da-4378-87ad-bcbac6a82eb1",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8644ec57-c083-4f85-8724-8a41e19513d8",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "01/01/2026",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "62eda92b-4b49-4bee-b39c-99aa83a604ac",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e766cdd2-b709-49ce-a240-5a96c140d213",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "097f3fe9-dc75-4a52-a8ba-4fc7a3fed398",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d716f1cf-dcc9-4a27-89f3-0c63c1ac9d12",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "89acd0fd-1b16-4aa8-9754-9b61eb2829fa",
+      "name": "CONTRACT_Create_10",
+      "commands": [
+        {
+          "id": "7a399369-b54e-4815-b5e3-2093274e594e",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b2cdb086-30a7-46f5-a019-155805b90676",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d2e94c4c-5743-4c6b-ba96-12fa2fc9fd74",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "77ed77d3-cfe6-4c6a-b0ae-9602940aa6ae",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "bfb0fa67-7350-45ad-80b8-e511be9edaf3",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "30431c03-66a0-49d1-8315-586be400a418",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a4cb601e-437d-4ce8-9841-d5b8b7db2d3b",
+          "comment": "",
+          "command": "type",
+          "target": "css=textarea[name='note_private']",
+          "targets": [],
+          "value": "Note @#$%&*()"
+        },
+        {
+          "id": "9d2f127d-8b97-4918-bcd5-3b34c5963169",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "28f61ba2-c0d4-4565-9eeb-bd5f02c403cd",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cf0883c3-a58c-4ca2-aa3c-6e4c00509712",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1e8275de-e133-4aec-ba33-82285964b843",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='/contrat/note.php']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "38e073a4-ba65-4a2e-8820-811ba1f1ae20",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "Note @#$%&*()",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c44472c0-94ed-490e-8e8e-43d1b0c242dd",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2444729e-629b-4538-bd5f-b06699e17c63",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d8c8020c-a840-4b58-904f-8c11eeb42871",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cc71ac9f-7957-4dd8-97e2-13804c8368ac",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9b210805-9ae7-4924-bec5-3fb7ddc82ddb",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "01dc082e-ac44-468f-85ce-7c0a6687c1db",
+      "name": "CONTRACT_Create_11",
+      "commands": [
+        {
+          "id": "5ff80952-ef7f-43fb-8949-2ce4f942c010",
+          "comment": "",
+          "command": "storeEval",
+          "target": "'A'.repeat(1000)",
+          "targets": [],
+          "value": "longText"
+        },
+        {
+          "id": "a9ec7282-d685-4b9a-a0c3-9bb4dcac839b",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "785d6c53-6cde-42cb-9beb-f8ac1b46dc83",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bdfdbbcd-7114-4060-8f25-0c01953c0ca8",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9634d60a-4b26-4c07-9b3b-7351bfc00377",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "63e30776-401b-4a0e-9409-998f6eb1426e",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5f4d3442-3720-4a1a-a9b8-422fc61d6ead",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4e54836f-bafc-47b1-8d7b-74828e3c8e09",
+          "comment": "",
+          "command": "type",
+          "target": "css=textarea[name='note_private']",
+          "targets": [],
+          "value": "${longText}"
+        },
+        {
+          "id": "24fd8aac-4fe5-45d1-940e-c571297c62b1",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "58b58ea2-042b-4f82-bb36-8e15a10a1edd",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "78782be2-cfe8-4a6a-a8ae-3fe763fa688c",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "235c2a80-e989-4617-8496-acab57975f8a",
+          "comment": "",
+          "command": "assertTextNotPresent",
+          "target": "Fatal error",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bb2f2b1c-c40a-4dc0-9e9f-5147d73da17b",
+          "comment": "",
+          "command": "assertTextNotPresent",
+          "target": "SQL error",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a62dd8ec-8ee2-40a8-8246-70ad25aca175",
+          "comment": "",
+          "command": "assertTextNotPresent",
+          "target": "Exception",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a5b35a09-e736-4842-8c72-a6a4f2a1f2af",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1501979e-afed-436e-b3b0-28f48ee301a9",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "eb84b5dd-773c-4afe-986c-e45848ad3fa7",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "12714fbc-eca4-43da-82a9-c360d8842cab",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "fa97bbbf-7a8b-4452-b187-c5a6243e85cb",
+      "name": "CONTRACT_List_01",
+      "commands": [
+        {
+          "id": "ad8b2be6-b56c-4f61-ade6-cb6e01dc0f47",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/index.php?mainmenu=home&leftmenu=",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b2967f7a-678e-4f13-aa09-71f4b5c94748",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='mainmenu=commercial']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5489eb85-9e9a-48a7-9ece-cd8636780445",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='/contrat/list.php']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "83c58613-99af-46e3-9c69-0121f7cb323d",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=table.liste",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7f69bd40-7311-4f89-8377-67f588f0f38b",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=table.liste",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "5c02a792-9511-4091-b666-96e7e60e0b60",
+      "name": "CONTRACT_List_02",
+      "commands": [
+        {
+          "id": "337063bc-4dd8-4fcf-a11a-38de11648f4e",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6e7e41ff-c0d9-47a4-a6ed-d2547cf364ee",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=table.liste",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "29f740e4-ce71-4689-bb33-01ca14fe46d9",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=tr.liste_titre a[href*='sortfield=c.ref']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fd9d12b1-8ccc-47c1-973d-126c6fd341e0",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=tr.liste_titre a[href*='sortfield=c.ref_customer']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "36ee56dc-e255-450a-852c-8b8595155ac3",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=tr.liste_titre a[href*='sortfield=c.ref_supplier']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2cca7a48-120f-435e-95ca-2f913734815b",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "Bên thứ ba",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a4ca6854-e79c-4bf4-8d48-6c2d4dc2ec91",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=tr.liste_titre a[href*='sortfield=c.date_contrat']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a4b8f3e9-149d-4221-bcff-7c4575f684a2",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=.button_removefilter",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "080995f9-01ca-4609-b66a-6c6e2380e363",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=button.button_search",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "a53eb99a-6477-46dc-a6ed-e41c26a337f5",
+      "name": "CONTRACT_Search_01",
+      "commands": [
+        {
+          "id": "16a78e7a-d74d-4a33-a5d2-1bc9e34f3ad1",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e69927b2-609c-40ce-adf1-b863f222a088",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=table.liste a[href*='/contrat/card.php?id=']",
+          "targets": [],
+          "value": "firstRef"
+        },
+        {
+          "id": "bf7f8621-b286-4622-bfee-043bd872600c",
+          "comment": "",
+          "command": "storeEval",
+          "target": "'${firstRef}'.replace(/[()]/g,'')",
+          "targets": [],
+          "value": "searchRef"
+        },
+        {
+          "id": "960007d8-a465-409b-af75-c2700f321a5c",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": "${searchRef}"
+        },
+        {
+          "id": "6e88ff9f-cb22-41f3-81e6-9bb7d9ffefcb",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "d1734cfc-b899-4789-9e71-7330a927eb72",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c2240515-9cf0-4c00-b1e6-f56fe4ed60f1",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "${firstRef}",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "75cc2307-0279-4385-b64f-9b6b6d51b2fc",
+      "name": "CONTRACT_Search_02",
+      "commands": [
+        {
+          "id": "412fc70c-3f3a-4983-a09a-3ac53af11a90",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0a082058-9324-471c-8f6f-39d546c38123",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": "NOT_EXIST_999"
+        },
+        {
+          "id": "2c05a7e4-0293-4409-aac0-9384579b875f",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "22292683-7252-4ed7-8dda-5e5bec815044",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "57fbe40a-3c80-4178-8268-7d78773a89d0",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "Không tìm thấy bản ghi",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "da568949-3a12-444e-b803-bfaccc0c1d5c",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "(0)",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "1452ec8b-f393-4214-81b9-60d589149e40",
+      "name": "CONTRACT_Search_03",
+      "commands": [
+        {
+          "id": "4a397d0b-bffc-4161-83d8-e6384c761f4d",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8b3c824a-d029-4e22-93bb-05ebedb0cc92",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a2d18fa4-ea4e-405c-ae2a-b847c22264d6",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "03831abe-9c95-4d9c-a9e9-59ea7e63042f",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "5c089fa5-f608-42b9-a251-08eef82e539f",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4803c11d-3238-4e4e-bc36-8c5087cf6932",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bf373050-efe9-4544-afac-fe78f4743bc1",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cc7f2128-3811-47d0-b516-8451914e1c3d",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "67675703-3b28-4876-91c3-dd5b544ea6d9",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "95664166-e197-4728-a9f1-db78d248dc45",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d799a2c2-1653-4c76-ac75-07ca401a4ff3",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='search_name']",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "f6f47491-0558-4d67-a458-14a0b72dfba4",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='search_name']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "f1b5be3d-5bfc-4922-a871-606f572c9f77",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "99a816db-40b8-4bd2-9acf-3f015a7f98cc",
+          "comment": "",
+          "command": "storeXpathCount",
+          "target": "//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]",
+          "targets": [],
+          "value": "rows"
+        },
+        {
+          "id": "fc307655-c5aa-4177-81c7-c515a5f17d10",
+          "comment": "",
+          "command": "storeXpathCount",
+          "target": "(//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[contains(.,'Testldr1')]",
+          "targets": [],
+          "value": "rowsTP"
+        },
+        {
+          "id": "2769197d-6354-4c24-ba52-36732b87ba38",
+          "comment": "",
+          "command": "assertEval",
+          "target": "${rows} == ${rowsTP} && ${rows} > 0",
+          "targets": [],
+          "value": "true"
+        },
+        {
+          "id": "d5438581-dde6-4e8a-9144-28b4d11867f8",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c7e092aa-170d-4a00-9e7d-cebf59a5d9c6",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "629fe5f3-10c5-4b7d-88c3-d7d1a0388c86",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "55f2865f-c87c-48a9-abfe-079fa4124532",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e1827aef-c23d-418e-b71a-8ecc0a9aac23",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "d851ecb6-79cb-4fc1-903a-d69b45f90262",
+      "name": "CONTRACT_Search_04",
+      "commands": [
+        {
+          "id": "b0dd66ec-b678-4d1d-b0ce-c62c09efa824",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fdda84d2-b205-4c30-a9df-517897b3c965",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "edb77cea-86c7-4158-ab3e-da9a7ca9b947",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "454a57ee-c61a-4296-9bfe-1978e993a021",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "265d7715-c348-4da9-ac4a-818056195e6d",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "09d59b4d-b676-448f-a64e-1ad4ae32a4a1",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9ba5d524-9030-4914-a3b5-1c04cff89fe0",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6c3677bc-4c70-4b10-9361-bbea58826325",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "02ef8535-3dbc-4714-b6cc-3f028fe9aed0",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fdb600ba-4590-4a89-a2b5-378ebc94af39",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5b62e36b-db10-4bbf-a72e-4c9573f29b6e",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": "PROV"
+        },
+        {
+          "id": "95abc9d4-348f-49c7-ad56-77226694e8fa",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "2269dbf0-291d-4905-9280-5657198645d8",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e36ebe1c-a90b-400e-a765-03bd8903dda2",
+          "comment": "",
+          "command": "storeXpathCount",
+          "target": "//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]",
+          "targets": [],
+          "value": "rows"
+        },
+        {
+          "id": "63049ec2-7b43-4615-8ded-93af8998d7b4",
+          "comment": "",
+          "command": "storeXpathCount",
+          "target": "//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]//a[starts-with(normalize-space(.),'(PROV')]",
+          "targets": [],
+          "value": "rowsProv"
+        },
+        {
+          "id": "bf787214-f712-4440-9481-de74461fd7bf",
+          "comment": "",
+          "command": "assertEval",
+          "target": "${rows} == ${rowsProv} && ${rows} > 0",
+          "targets": [],
+          "value": "true"
+        },
+        {
+          "id": "23c63af4-ad15-4315-a27d-847519f66802",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "260f18ed-d3d9-48df-ac6e-d768519e2d92",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "273ae2fa-5238-4a2a-94bc-27d32caa6b41",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7cece62a-7c11-45c5-8d48-09b21b42eae0",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "72622ca4-0799-4d13-9d16-0fb6e3ac0101",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "431d5c88-928a-4e91-85da-ba54683fb2ab",
+      "name": "CONTRACT_Search_05",
+      "commands": [
+        {
+          "id": "fcf68583-9496-425a-aeb5-ee60483c6133",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bf783833-e416-40fa-9b26-9a14bf1c3ef2",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countBefore"
+        },
+        {
+          "id": "73286e45-a871-4176-97c5-55b744621772",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": "NOT_EXIST_999"
+        },
+        {
+          "id": "2e1eb294-e46d-42b2-8a49-b0fd8b822e9d",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "424563ec-a15d-447f-8179-98e0a09dadde",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cde5e22d-af7f-4de4-80c0-b3b5dbe2cc54",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "Không tìm thấy bản ghi",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7abc33a5-f9d5-4f7e-8aa5-6032f4ed3d6a",
+          "comment": "",
+          "command": "click",
+          "target": "css=.button_removefilter",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4d77f8a8-20c8-4916-9523-ffb38938e703",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cf114937-ba69-40a2-910f-6553bda6b351",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=table.liste a[href*='/contrat/card.php?id=']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ca63ee96-0209-4771-954a-8521c0df9993",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countAfter"
+        },
+        {
+          "id": "22c6a0a0-0adb-42ea-b181-0b6ef64c6b8f",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${countBefore}' == '${countAfter}'",
+          "targets": [],
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "id": "25725d81-5835-4384-b8d4-9472dab59e12",
+      "name": "CONTRACT_Search_06",
+      "commands": [
+        {
+          "id": "fe674cf9-3d1e-45ac-994b-ef97184678de",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9b46bea9-c28f-401c-b4c0-2783d545bd32",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=table.liste a[href*='/contrat/card.php?id=']",
+          "targets": [],
+          "value": "ref0"
+        },
+        {
+          "id": "709439b3-a835-4051-9165-2db727006861",
+          "comment": "",
+          "command": "click",
+          "target": "css=tr.liste_titre a[href*='sortfield=c.ref']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a10e8589-6dcb-4d91-92a5-3b4030e5ab52",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e5d09b26-1332-44a5-a207-3c2c92dff37c",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=table.liste a[href*='/contrat/card.php?id=']",
+          "targets": [],
+          "value": "ref1"
+        },
+        {
+          "id": "421cccea-be9e-4e3c-8a2a-8284a4bc1371",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${ref0}' != '${ref1}'",
+          "targets": [],
+          "value": "true"
+        },
+        {
+          "id": "75cbb1da-7723-481d-a127-078b8c2c3a3c",
+          "comment": "",
+          "command": "click",
+          "target": "css=tr.liste_titre a[href*='sortfield=c.ref']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "57087b43-8ddb-4e09-8df2-df83c12c08eb",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a7515c77-6493-4806-988e-8699485b0139",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=table.liste a[href*='/contrat/card.php?id=']",
+          "targets": [],
+          "value": "ref2"
+        },
+        {
+          "id": "7d572f93-a903-4df7-8358-44f63e2155c3",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${ref2}' == '${ref0}'",
+          "targets": [],
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "id": "47156dfb-1533-499c-9957-8dd541f0eb80",
+      "name": "CONTRACT_Search_07",
+      "commands": [
+        {
+          "id": "50741e2c-b0f2-4780-8d8d-be73408224a4",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "55433839-0a31-495a-a3c5-e5c0783df978",
+          "comment": "",
+          "command": "click",
+          "target": "css=tr.liste_titre a[href*='sortfield=c.date_contrat']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2ab85ed2-8120-49c2-adfd-66f617f234e5",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "84bb8b19-3f65-4695-8a6c-e54291e6067b",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=((//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[1]//td[contains(.,'/')])[1]",
+          "targets": [],
+          "value": "date1"
+        },
+        {
+          "id": "e4a6ff35-461d-4a09-9052-9787a3729105",
+          "comment": "",
+          "command": "click",
+          "target": "css=tr.liste_titre a[href*='sortfield=c.date_contrat']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "053a746d-2ff1-4046-a536-278983c0dd95",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e12e1a25-fc24-417c-8eb6-a6be117b8d86",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=((//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[1]//td[contains(.,'/')])[1]",
+          "targets": [],
+          "value": "date2"
+        },
+        {
+          "id": "9ba4ff45-7fe1-44bf-aa33-589e498a0ec8",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${date1}' != '${date2}'",
+          "targets": [],
+          "value": "true"
+        },
+        {
+          "id": "c0e3ffab-2374-444e-9bea-15682e9259d8",
+          "comment": "",
+          "command": "click",
+          "target": "css=tr.liste_titre a[href*='sortfield=c.date_contrat']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b6105d61-692e-4f0f-9891-4731a5346f63",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "133d44dd-bdad-4917-a385-baceeafd4f47",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=((//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[1]//td[contains(.,'/')])[1]",
+          "targets": [],
+          "value": "date3"
+        },
+        {
+          "id": "497a3a9a-3cd9-4595-a941-edddaa09e670",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${date3}' == '${date1}'",
+          "targets": [],
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "id": "baf78690-84d4-4b70-8963-f837ffc34330",
+      "name": "CONTRACT_View_01",
+      "commands": [
+        {
+          "id": "5de08176-6f37-4c55-8f8a-479ba81d7b3b",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "28eb7eec-c1ad-4fd0-a035-e9866dc38703",
+          "comment": "",
+          "command": "click",
+          "target": "css=table.liste a[href*='/contrat/card.php?id=']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "306783bf-37bb-4990-bafa-a3a983e1763e",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a[href*='/contrat/note.php']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c95659a2-2f1f-4784-b496-abf12cffa6b9",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=a[href*='/contrat/note.php']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "91489e98-a579-49fa-b3e5-c1182bd9d217",
+      "name": "CONTRACT_View_02",
+      "commands": [
+        {
+          "id": "de4bde31-57a8-4bfa-8dfa-ef2b8c3e0af5",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a0a5b562-79fd-4636-885b-f3f9c6e81b7c",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9d9e39aa-5cd6-4097-ba94-09efdac85090",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c84f0e3b-4e26-4e8f-bbeb-0247b4bcca66",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "287c56bd-fa3a-47a8-aec9-8412fc3f113f",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ae6ae215-9527-4499-806d-3c43b0c66d5f",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "947966f4-35a2-4c05-9cdb-51a842975134",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e4b381d9-a4f5-40ae-983f-d9672b5be54d",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fa9a3b42-aea0-4c65-b98a-0c6e038a6265",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "dbc434f2-228f-48db-a108-4a9119b40f67",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='/contrat/list.php?restore_lastsearch_values=1']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "89377b72-233b-45f7-a113-e1a46dfa2c9f",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=table.liste",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "92f5320a-d77e-4196-b9f7-e210410da8ac",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=table.liste",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "63339df0-cb52-4627-814a-93acb5051d63",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1ea6d511-9f9f-4ecf-95fa-fc9ce6a039a2",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d4ddd34e-c303-4307-842b-1dbfffbb8a99",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a14bfbad-28a5-47ee-a631-24f05e0ea745",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e5489654-a85c-4958-8bc2-652d437ae4d1",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "3e5aa2f4-f2cc-4dd0-a0a4-0ba1d3d5822f",
+      "name": "CONTRACT_Edit_01",
+      "commands": [
+        {
+          "id": "9947864d-0737-4c45-a824-0dd95d7ad87b",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f3e9fec7-70c7-4268-aae6-b6ffe94cbc2b",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "02aaa431-c40e-4bb2-98c6-ff09a889fe1f",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2e52fa69-e636-4674-8625-9c8b80ebbfae",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "32619e07-7fbe-44dd-a522-9ae750489334",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "87e6f300-43df-4fa2-8c5f-11281e7a7757",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "70710010-c90b-472d-aa5c-2db3f1594411",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1f8679b7-5c89-46db-af29-46139b7f0ccc",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "17eb337b-8cef-461b-989e-5eea4f23b1af",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9bbd44ac-d4ea-44ee-8413-248aa218a371",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='editref_customer']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5a06dbd1-1e80-4727-a7c4-0fa571c03d7a",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='ref_customer']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "92903db4-ab03-402c-8eb0-eb2b42b4043b",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='ref_customer']",
+          "targets": [],
+          "value": "RC_EDIT_01"
+        },
+        {
+          "id": "14fb33dd-02d3-4783-98c4-88cda1ff1611",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='ref_customer']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "8f581ea2-ad7c-4e09-a3fd-4c05d8035a4d",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "RC_EDIT_01",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "768666f1-d826-4438-a196-13ccd342b90d",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "678e6977-238f-41ff-93d9-2bb914e4d9a1",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a964fe34-cb6d-4fe3-9a49-4b55cefa53fb",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "435f7440-40a7-4c69-9c31-46c200da786f",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "c19563ec-9b1c-4db3-8a36-893ccb6d1dd6",
+      "name": "CONTRACT_Edit_02",
+      "commands": [
+        {
+          "id": "c8f1ad9e-094c-4ca7-922f-45643a8d69bf",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d53056ed-b787-45dd-b6d5-641a4a6f88f3",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2b6efde9-89a1-4bf1-a9bc-65e91163adb2",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "993c077e-6d87-499f-b191-81a327696293",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "88958bd5-7723-48d5-9282-62c66ad4eeb6",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fdfae8ee-3b3c-4ed7-a3dc-ec30c979a436",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "977e0da8-0e38-4b3c-9489-a263051aaa7d",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4012a26d-31f7-4566-85aa-fab6aa27cb59",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "db552472-6e6c-435d-8107-6ebec18b1cbd",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ff477023-b692-4e45-a771-ff12530bfad4",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='editref_customer']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2586344a-6da5-45c1-a492-4a4d650907fa",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='ref_customer']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4e33bc74-4d35-406e-982b-e051edcf888b",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='ref_customer']",
+          "targets": [],
+          "value": "RC_NOEDIT_01"
+        },
+        {
+          "id": "381e3af1-e258-4ba5-b2a1-d312fb66f926",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-cancel",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fcd9a1a6-1c3b-45cf-8bc6-f50848f5d195",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8cff88ee-793d-4b9f-9515-24c849717cd8",
+          "comment": "",
+          "command": "assertTextNotPresent",
+          "target": "RC_NOEDIT_01",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bbe96319-eba3-4d59-8e52-555bae0c3739",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7cd26f9a-53be-451e-8e8d-b17d1bc12985",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "935bb10f-b691-4841-848d-de5b1824b6bb",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fcff9f3c-f268-4b01-b299-1f07c1c733cf",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "188f04ea-6f40-48f7-826c-532ea616112b",
+      "name": "CONTRACT_Delete_01",
+      "commands": [
+        {
+          "id": "ac3f65d5-8ab2-4412-81d7-f2802b92c555",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ff4778e3-7ec1-495a-8a3d-0794265c9d76",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countBefore"
+        },
+        {
+          "id": "1477f06f-4064-4d02-bfb0-92e1a95d9eb7",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "40a52110-87e3-4e9d-b5cb-095341a8de97",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ee13803e-04de-4ff2-8e9f-47381ca21531",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e7b7f9e5-a5b6-4380-928d-7f5ff328a244",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "8404d09e-9219-4703-a296-d01087d0561a",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "121982ec-cca5-4829-b926-72f4fa06ff94",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "dcd993af-d4d7-42ae-99bc-acef9f4d2e2a",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "67f95713-c805-47fa-ae8f-39754cae7f39",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cae5957c-8f64-45fa-89b2-b1fa0dcdc282",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7fb43e43-2036-4526-9e0f-83e29dde1a45",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c223e41f-fa75-4273-921f-54ddafe1affb",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6c79b687-ff87-4740-93e5-9ddae23be757",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "76c28143-d056-46d4-b8c9-f9820753e2ff",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7c364dd5-0aec-456a-adf4-d352597fbce7",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countAfter"
+        },
+        {
+          "id": "7670d9e2-605b-4664-ab0f-1d8f542ee63d",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${countBefore}' == '${countAfter}'",
+          "targets": [],
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "id": "3665b4b3-24e3-40d5-9e0b-946588be2d41",
+      "name": "CONTRACT_Delete_02",
+      "commands": [
+        {
+          "id": "9f25e941-0f22-4527-9b9f-405a45efbec5",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b12447bb-7eaa-4758-87ae-7e3ff844066c",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a1d0208a-1aab-4760-be59-90cfb1a49230",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "41f0a682-56f3-4e27-9436-f3f1cc79d946",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "Testldr1"
+        },
+        {
+          "id": "a3126e43-c199-412c-aea0-0be36e1ac02e",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f9caf3e9-4e83-4f4a-acf6-a88689a7323e",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a9a1bea2-90e0-4341-8249-69dabfb3a367",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7f8060e7-c477-4a41-b437-5a77366c5aaf",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "91d40116-3ff1-4ce8-90c4-86ed36e2de4f",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6f150008-7ccc-490a-a8f4-b0da5194c6a1",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "14c23d1d-2fbb-469c-a424-26d461a1e820",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[2]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9fc1d766-a878-403c-95f4-1baf857e4fb9",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[2]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ea4fbd00-ee72-49bb-8e3b-08a15049e464",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "04ea820c-b1b0-41c3-bb8b-8d0d2d7d07ae",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "02128784-81cf-42d5-8a6d-a3e192cb9d07",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5b04646a-e1c8-4c9e-b77c-a678a547f64d",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4f92b76c-9c08-4558-b927-03cc55cdfb34",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_contract']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "acb86714-8dd4-4407-9326-dfc2de8a005b",
+      "name": "23130094_BuiAnhHau_ASM7",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 300,
+      "tests": [
+        "a1e35cae-4207-4493-8aa0-34ed53d0e6cc",
+        "c25fb459-d9eb-4be0-9bc8-c6ad0e86e7ba",
+        "0941b6e6-e505-406b-9119-3069359e5803",
+        "017575f4-3369-429c-9521-af7b5248df65",
+        "8c0a6896-05f0-440b-a418-f5e537d5fe66",
+        "a85a3029-7d2b-4d10-8107-c4c3c509256e",
+        "0e19408b-8d0e-4016-a295-ae46fd6f2e52",
+        "822ac0c2-4996-416e-ac43-7fbd804683e2",
+        "a6940e8f-5f64-4cbb-8183-457915efb10c",
+        "25d64822-7b6e-4058-b649-ad745709c1ef",
+        "89acd0fd-1b16-4aa8-9754-9b61eb2829fa",
+        "01dc082e-ac44-468f-85ce-7c0a6687c1db",
+        "fa97bbbf-7a8b-4452-b187-c5a6243e85cb",
+        "5c02a792-9511-4091-b666-96e7e60e0b60",
+        "a53eb99a-6477-46dc-a6ed-e41c26a337f5",
+        "75cc2307-0279-4385-b64f-9b6b6d51b2fc",
+        "1452ec8b-f393-4214-81b9-60d589149e40",
+        "d851ecb6-79cb-4fc1-903a-d69b45f90262",
+        "431d5c88-928a-4e91-85da-ba54683fb2ab",
+        "25725d81-5835-4384-b8d4-9472dab59e12",
+        "47156dfb-1533-499c-9957-8dd541f0eb80",
+        "baf78690-84d4-4b70-8963-f837ffc34330",
+        "91489e98-a579-49fa-b3e5-c1182bd9d217",
+        "3e5aa2f4-f2cc-4dd0-a0a4-0ba1d3d5822f",
+        "c19563ec-9b1c-4db3-8a36-893ccb6d1dd6",
+        "188f04ea-6f40-48f7-826c-532ea616112b",
+        "3665b4b3-24e3-40d5-9e0b-946588be2d41"
+      ]
+    }
+  ],
+  "urls": [
+    "https://demo.dolibarr.org/"
+  ],
+  "plugins": []
+}
