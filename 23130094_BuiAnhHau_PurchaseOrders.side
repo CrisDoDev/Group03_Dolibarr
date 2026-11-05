@@ -1,0 +1,4210 @@
+{
+  "id": "664f4f7b-f27c-42f8-b5cf-bb080f97dc4a",
+  "version": "2.0",
+  "name": "23130094_BuiAnhHau_PurchaseOrders",
+  "url": "https://demo.dolibarr.org",
+  "tests": [
+    {
+      "id": "ea8dc71f-a77a-4646-81dd-4e59d07afd8b",
+      "name": "PURCHASE_ORDER_Setup_01",
+      "commands": [
+        {
+          "id": "626969ae-e8ab-4e31-a491-713a3b94ac05",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/public/demo/index.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e87831e5-b659-4282-bd0c-333024b7b35c",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//form[.//input[@type='checkbox']]//input[@type='submit'])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d8d011b0-0e82-489c-8979-1cf4aec51bbe",
+          "comment": "",
+          "command": "pause",
+          "target": "8000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c2a01860-4174-4c9c-b3a1-9e934effa054",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/index.php?mainmenu=home&leftmenu=",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c69cae7e-f09f-41e4-9671-340ab1c49cac",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a[href*='mainmenu=commercial']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "d509ff30-5584-4639-b088-18d723945253",
+      "name": "PURCHASE_ORDER_Create_01",
+      "commands": [
+        {
+          "id": "f55409f9-9547-4270-bdc0-720549edbc50",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4e4b48d4-f698-41af-8657-6dd4fb6a6a34",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='/fourn/commande/card.php?action=create']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b063bacb-d3e6-44f9-8211-2096b75f26c8",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "810e02d2-fe62-4447-a457-1a329795cb24",
+      "name": "PURCHASE_ORDER_Create_02",
+      "commands": [
+        {
+          "id": "7512c015-1e2d-4824-811e-0dc72e516973",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d2305f12-f3a5-4f16-b137-1d64549eb068",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ff9ebe7d-381b-482c-a5ee-d24ba66f7e6e",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0daa39ad-b662-41f9-83be-4ef55f51300c",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=textarea[name='note_private']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ef98c44b-6c2a-474f-b739-0638e6814699",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "68489b37-0fb5-486d-9b7d-ef5be1ea8b22",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=input.button-cancel",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "2a3a3003-a9fc-4059-ab38-3cff7bb8ed97",
+      "name": "PURCHASE_ORDER_Create_03",
+      "commands": [
+        {
+          "id": "f2f8d5b5-3d33-4fb1-8e64-2c3fadd53bdc",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c9a3665c-a58f-4970-ae12-38bb6c750788",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "28d796d1-512c-41ef-be0a-98011160006e",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0b14a069-9c03-42e3-a382-90ce1ccf0166",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "541ae426-29e4-4eab-a820-2f1a1a20c9b9",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "07cf6a37-230c-44f1-b872-c7d4bca07860",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ecfd91c4-97e6-4dbb-9a36-d1a09939d1aa",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8a731799-4d28-4c25-b7f7-c3c272d6c21c",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "65d73415-1cd5-45f6-96ca-6fc50098bf94",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "65e1ac98-8228-4e6d-99ef-ce86b9f3bc4c",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "10c3d7b8-fe19-4892-a3d0-59639c0c984f",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7e50fece-31e0-441c-b214-226976404065",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9ad652ac-a73b-4ba8-86eb-ffe254b2adf8",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "442ce629-a6f7-4772-8e55-310eaea3896a",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ff6d4ba9-19b6-4dfa-b18c-1fb045ec138e",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "460a91c4-70f0-412e-8728-617fcbedf3da",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "63c5ee3d-d687-420d-996b-af229a2680be",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "2bc1721b-19a6-4fa1-bb79-0cb7efce191e",
+      "name": "PURCHASE_ORDER_Create_04",
+      "commands": [
+        {
+          "id": "8f1d8476-1947-4d3d-8424-1665ebbcd976",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a4632c61-c9a8-48c0-851f-7175eeb835db",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "20329c9b-d592-45d5-88ea-4a8640fc6c14",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7936a7de-5737-4f2d-aeff-46c3a9147273",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "e969d926-4163-4adb-a918-f1c0d64ca3c0",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "abdc5dd3-b83a-4b04-b60a-e5f1b55b6abf",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "41efadde-a843-4d07-8aa7-af37bf058c16",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3413738f-786a-4692-bf61-0a37ad799989",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3c076991-cddb-479a-8317-16849a990bde",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "b8c5e49f-a0a5-410e-ac4d-fe9c4d6d38dd",
+          "comment": "",
+          "command": "type",
+          "target": "css=textarea[name='note_private']",
+          "targets": [],
+          "value": "Internal note 01"
+        },
+        {
+          "id": "053c2157-e37d-49e8-be1f-e6f8510b16df",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7dc4cbf9-ca05-4522-b384-6a06761b0039",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f590911e-0044-41b8-9644-c8129ff4ae16",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bfeb0225-9fb7-4daa-8db3-96c3b0195b98",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='/fourn/commande/note.php']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ee6c19b9-6bb3-401c-8344-9dcadadeecf6",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "Internal note 01",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d1feab72-2052-4a7b-8589-c43ebdef5762",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e9608646-1924-4bec-9b6f-6b9712f12c41",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3210c11d-0332-4e62-9116-0d62ab13411d",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "32e541dd-e578-46dd-916f-6f8e992a544e",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "821742bd-74e0-4e70-a3ce-90c58404dde6",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "98341222-c1d5-42cc-bfaa-6abc261b2418",
+      "name": "PURCHASE_ORDER_Create_05",
+      "commands": [
+        {
+          "id": "07b176d0-bfd1-42dc-ba5c-bb9960f7443c",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "dbf6fc35-1668-4c92-89cc-1f208027e030",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b1da00a7-5cdb-436d-8c9b-412929370ea4",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "034f9245-8bb0-4a84-ba49-91f399a19bf5",
+          "comment": "",
+          "command": "pause",
+          "target": "2000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cc296566-39bd-42a1-a4e8-5c08021c5990",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "13966027-22b3-491e-a505-6f137784eff6",
+          "comment": "",
+          "command": "assertElementNotPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "d02c9ed4-16d3-4adb-9965-72b8bee46a0b",
+      "name": "PURCHASE_ORDER_Create_06",
+      "commands": [
+        {
+          "id": "a2473bf4-b708-49a4-af4e-1b023564c3f6",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1765b2d2-e0d0-4829-8888-94967dfab80e",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "62153915-f42a-45b2-8fa2-72ddc4d2feb1",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "21d40dd3-83bb-4437-8c50-f0e4383ad279",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "78490a1a-4e78-4946-a2ab-2ac095843d09",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "da284063-d438-40ac-91bb-f4a7838bcc40",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0302374a-7006-41bc-a3c1-e9c496e971bf",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2f37fbc1-e916-4701-bbe5-564ce46dce00",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a47163d0-9709-4da5-8153-f10508e6973f",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "0ca0b2a1-82f8-477b-9963-4df8965a980c",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8c5a3c20-12ea-40fd-b377-43a35a6724b1",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a5ba194f-89e3-4c05-b2ba-a240a23f8427",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7b1534f9-ef51-4377-89f3-4a1e6028d0c1",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]",
+          "targets": [],
+          "value": "orderRef"
+        },
+        {
+          "id": "579f99ed-f56b-4aee-ab3e-683e22a7cb73",
+          "comment": "",
+          "command": "storeEval",
+          "target": "'${orderRef}'.match(/\\(PROV\\d+\\)/)[0]",
+          "targets": [],
+          "value": "orderRef"
+        },
+        {
+          "id": "1a215f56-7f09-4f70-aeb5-dc9e23649855",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4db71059-cdd3-4e91-98b4-1c6b5ae9c544",
+          "comment": "",
+          "command": "storeEval",
+          "target": "'${orderRef}'.replace(/[()]/g,'')",
+          "targets": [],
+          "value": "searchRef"
+        },
+        {
+          "id": "acb16bce-92f3-4c4a-a832-e393a1f8ebd0",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": "${searchRef}"
+        },
+        {
+          "id": "6c184533-71d2-415f-8f86-49ab3e7ef4eb",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "438eecb7-0ab1-4dc8-bd9f-4ee45c3b6954",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e1610165-dfe5-4bb6-b6d2-b2ba0fe6c57f",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "${orderRef}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3abe2224-14ca-4b62-82e7-3bfb9ac7c09c",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "link=${orderRef}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9ec124c9-675e-4cd6-8e1e-e362f318dcc7",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5cef7800-77ef-45bb-9ea2-c4d469ac8e44",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9f163ce5-f55e-4de7-8d82-ba229691ad23",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bf55d555-ea28-4dc7-9771-bbbb6b1563b1",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2a5570a5-a37b-40c7-b724-08da0bf469fd",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "595b7e90-2ecc-49f5-bbab-aa0f9fd29c7c",
+      "name": "PURCHASE_ORDER_Create_07",
+      "commands": [
+        {
+          "id": "90758dfb-7cbd-4902-a73c-02197a3668d4",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5c828c87-6e16-4115-9b01-dfcb051cfe84",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countBefore"
+        },
+        {
+          "id": "3d57e4df-cd40-4ed9-9597-86f1de666771",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='/fourn/commande/card.php?action=create']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5c134103-e8e3-4143-b2a5-acd4cd2b011c",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7a43273f-f453-4a38-a9fc-0ad6e98ce8cd",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e7c053e4-b49c-4954-bed1-22918d13ec07",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "be5a7089-a320-4b28-a5bf-898c6e24bd68",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b64e7e82-382b-46af-915e-50af7b72553c",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e402b7a6-236e-460c-8132-7d9bea59b0b2",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "146d1283-ca3b-42eb-9660-904ac9b1da40",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4434e614-1bb5-4248-bfef-bb4a81a20007",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "7844f960-6db2-4424-9313-611c3ed41152",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-cancel",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "026eb291-8679-4095-bb82-79af7e556bb7",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1c18c105-8432-4397-a47d-3129e2ba3cea",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fc613b6e-3352-4f2a-bf3e-572f7e161c55",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countAfter"
+        },
+        {
+          "id": "d2bedb4d-c701-42a1-b16f-e33463073a00",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${countBefore}' == '${countAfter}'",
+          "targets": [],
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "id": "51b49c80-a8a3-4281-95ef-0e2ea6753e28",
+      "name": "PURCHASE_ORDER_Create_08",
+      "commands": [
+        {
+          "id": "5d049645-d726-4dd5-affa-44c7fb278053",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8dd52399-cad7-4dea-b8fb-e2f4deae61ab",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countBefore"
+        },
+        {
+          "id": "b229dfeb-4c65-4313-94bf-78c49d29aa3d",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "422197ac-27b4-4a71-80eb-a40c7ebc36fc",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "287b55a2-70cf-4dd2-9ead-a91c8e7583c2",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a802878a-48c5-4bae-b1c0-4de2496f34b8",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "8ff8597d-3067-436e-8f0e-308e3b7d9a6d",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c50484ab-56f4-4edb-a0c7-dc547ccf5bd8",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "dc240349-355d-4c43-8613-9fb24a557682",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "799bc702-03a2-4d75-a21b-6569fbce2516",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b1f8ce13-94ed-4e07-bf7d-c4a80dbae18f",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "753d610a-96e9-4bef-aa46-8f8b051e4df0",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "43a42bf0-0b2d-4b11-a0eb-8f703471b8a1",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d484b44f-b06b-4096-8757-737eb1b3050a",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl1",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7f88bba6-1e16-4b5f-a42f-117798a8241f",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e3889ab4-b655-487a-bb45-6ed27c6ab0c1",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ebc78e34-5387-4205-9113-947a9c0b7f2e",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "49c829fd-cf6c-405e-a599-cdf48596421e",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "bd295eea-0a8b-4a09-9976-6520e4b2d3b4",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f7874b0a-b557-4153-9cb9-64a3db5ddebc",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8beda7b8-d5c6-49a0-b381-d98480c06f28",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6df1e9f6-382b-4372-a773-a7aca8315eaa",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "63447a96-f015-4728-868b-d54f0335df17",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "2e3f73f5-94eb-4b2d-b19f-6c7905526b57",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "05380470-e95b-4d95-bf2d-a328e51271b3",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "90a9b405-f69d-46a3-a4bb-64154726d608",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl2",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5e2c05eb-0bbe-4e62-a18f-a2568f2ce142",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d07bb45c-84f9-45bb-82ed-ea71fb0ecdb7",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countAfter"
+        },
+        {
+          "id": "e149ceb1-d3ed-4f47-a091-555047bb48cc",
+          "comment": "",
+          "command": "storeEval",
+          "target": "parseInt('${countBefore}'.match(/\\((\\d+)\\)/)[1]) + 2",
+          "targets": [],
+          "value": "expected"
+        },
+        {
+          "id": "eef7a061-72de-49c5-aa6a-a2c96b9b9109",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${countAfter}'.indexOf('(' + ${expected} + ')') >= 0",
+          "targets": [],
+          "value": "true"
+        },
+        {
+          "id": "d4749c38-af6c-4fc6-a496-c9805e2997cc",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl1}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a9c2f125-0b2c-4bf8-a467-bffad38a9904",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1b54e1e0-a7e1-4b6f-92ab-b20b0c79d314",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2703fea7-554e-44bc-8829-9949bb888b2b",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0b956be3-e599-4cdd-82d0-d13b2d1cd1b1",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8d2125b2-d5a7-4cd6-9042-c96f16f57e55",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl2}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "95854b96-32a8-4665-8d29-4cad35eebd9d",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5ce24637-e39f-4329-811a-c8b020333a9d",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "44c71dc3-35b5-4097-b6cb-dda5f3221764",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "477ce464-7794-4872-a38f-55b0b80a5d8a",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "12dc5646-2d71-4f67-8362-0fcdc714cc55",
+      "name": "PURCHASE_ORDER_Create_09",
+      "commands": [
+        {
+          "id": "2120115e-d6d9-4514-ab6b-0dc6a3bf0f6a",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "25fac56b-6da5-495d-a194-4e24d086ab52",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "39a8f037-6baf-4cd2-9e8c-40e33de21d04",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9b23a979-1810-4cdc-849c-af7404b1360f",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "6ce3e8ff-9087-4242-9401-9c5a32e4ad9e",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5f358c26-91da-45de-99c1-f45cd262af17",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6cc4d837-3f69-4640-83f7-a08c776406b5",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c4aa48ea-ee28-4892-b600-26f41a4b0edd",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f6e9b69c-952b-4fe2-9d58-12d8a8cb147a",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "e92006ba-655f-4f32-be92-dfd77edbae13",
+          "comment": "",
+          "command": "type",
+          "target": "css=textarea[name='note_private']",
+          "targets": [],
+          "value": "Note @#$%&*()"
+        },
+        {
+          "id": "f7c72404-4ea8-430e-8a75-1dc32210835d",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "65715781-38cf-4731-a563-ff2d6a238564",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0d0ec69e-641a-4d78-b812-118668b5ed62",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "712722dd-6784-44ec-b173-7f5714665288",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='/fourn/commande/note.php']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7cc4dc45-386f-40b1-af3a-5a4eda31ca7c",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "Note @#$%&*()",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "29cd443e-ddd4-4185-9e65-78d00cdabe24",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b04c83e2-d93d-415e-b986-4a07b349f4b1",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "268cd6ea-2f53-49cb-bd82-08173fa4019a",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "64a7781f-f3e0-45fb-a91f-5a187ae004c6",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b6122c03-60cf-4642-b4d6-07eee7493ba9",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "aea2b26b-2fc6-4b3c-b742-74c34ff53230",
+      "name": "PURCHASE_ORDER_Create_10",
+      "commands": [
+        {
+          "id": "aa08a87c-9dbd-4c41-bc9f-1cc4bc264906",
+          "comment": "",
+          "command": "storeEval",
+          "target": "'A'.repeat(1000)",
+          "targets": [],
+          "value": "longText"
+        },
+        {
+          "id": "7cf91e2b-8f8f-4f5b-b42d-e87359ace8a4",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b64382b3-b058-4c2e-b24e-51c9891d76bc",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "90be4a0b-8e4a-497a-9cdd-b5fca5f481ab",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7069c81e-995e-4c6f-b843-17166200ad3b",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "e7b04a89-c143-4e04-a8fc-c73d9d2040f0",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fb7723a0-6b7d-44cb-8739-6540b83adcec",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fff3db69-6f39-4bc0-8196-f8f8a302526c",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5593486c-5d7e-4395-bcce-acec87cfe360",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ca483020-d77a-4047-ab12-f728c9095a10",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "b3f02afe-f0fe-461c-aa38-e52a35a99459",
+          "comment": "",
+          "command": "type",
+          "target": "css=textarea[name='note_private']",
+          "targets": [],
+          "value": "${longText}"
+        },
+        {
+          "id": "a5613c0e-fcff-4e47-aa25-f3fac5e891c7",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5b8ffd16-5e29-4e19-8341-87221f3af1c9",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c9ef2d46-9c3f-4942-b857-1123e24ae123",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f1a5944d-72cf-474e-973f-1e1d7d05e113",
+          "comment": "",
+          "command": "assertTextNotPresent",
+          "target": "Fatal error",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9e00078c-4fac-41b4-9f1c-cd69c3d4877b",
+          "comment": "",
+          "command": "assertTextNotPresent",
+          "target": "SQL error",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f73eb068-8491-4b79-aaff-2a077bb830f6",
+          "comment": "",
+          "command": "assertTextNotPresent",
+          "target": "Exception",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "02dbfd23-fce1-44a1-a981-48b6a1859196",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3afa518f-8d5f-4465-9eac-faac34352eda",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "107c8811-3fcd-4339-b675-1a148b1131c3",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b2de28f5-949b-4c4a-9ab1-c344bb029783",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "fbb033d5-ab8f-420b-916c-7465f68e0ed2",
+      "name": "PURCHASE_ORDER_List_01",
+      "commands": [
+        {
+          "id": "5e3f2f6e-3a1f-4139-a3c0-f8090999c324",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/index.php?mainmenu=home&leftmenu=",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a71dfd36-3770-4c4e-8915-8f796e86c203",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='mainmenu=commercial']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "864a3e48-a4c9-423e-950f-b081e2559c89",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='/fourn/commande/list.php']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fc4a0079-dc02-4063-b2d5-2bb3e6929711",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0fd1d1b6-eee4-42db-8297-57a63838d90f",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=table.liste",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "d95df1c3-f48f-41a3-b82f-afffe3ff6229",
+      "name": "PURCHASE_ORDER_List_02",
+      "commands": [
+        {
+          "id": "b437d66d-5ef6-4b6c-bddd-ccb3b64dbaef",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "43666f6e-b14e-4a16-835c-43c904c82494",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bec251fd-2f3f-478f-8617-493bff5eb66b",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=tr.liste_titre a[href*='sortfield=cf.ref']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1e7afdc7-dae2-4b3a-9636-9f42fdaaf95b",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=tr.liste_titre a[href*='sortfield=cf.ref_supplier']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "078bd65b-bf42-4e3b-b930-f2031753d0b9",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=input[name='search_company']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1774e698-acfd-40ce-b51a-374c29bc64e5",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=.button_removefilter",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1bec0c51-40ac-450a-8bcb-c7f507a275b2",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=button.button_search",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "807c27fa-1248-4d65-b7fb-900c95342b72",
+      "name": "PURCHASE_ORDER_Search_01",
+      "commands": [
+        {
+          "id": "bcf2354b-b883-470d-963b-fb28bc2e38c3",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e9854451-8bb0-4ee4-9641-663723ea17e7",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=table.liste a[href*='/fourn/commande/card.php?id=']",
+          "targets": [],
+          "value": "firstRef"
+        },
+        {
+          "id": "bfaa12f9-c03c-42ac-8532-49bee2705cab",
+          "comment": "",
+          "command": "storeEval",
+          "target": "'${firstRef}'.replace(/[()]/g,'')",
+          "targets": [],
+          "value": "searchRef"
+        },
+        {
+          "id": "3e249452-3ab9-4b44-8c9f-3440ff83a652",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": "${searchRef}"
+        },
+        {
+          "id": "7dad34bf-8743-48c4-acd0-5272c0bb8806",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "5715a8c8-0ebf-4b71-aad6-12dfe40173b1",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e52fad47-0a64-4c8a-aa45-1e83ba7efa77",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "${firstRef}",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "f25576a8-0f98-4f05-91bf-7f68cf67f731",
+      "name": "PURCHASE_ORDER_Search_02",
+      "commands": [
+        {
+          "id": "fd68c3b8-4417-4cc5-947a-cba3b6ddeef9",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fb838def-1844-44ae-abc3-d0b00360a652",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": "NOT_EXIST_999"
+        },
+        {
+          "id": "0b6b6658-0f12-40ea-b0de-0de7c2d3d744",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "1fe50243-a490-4a42-a6f6-85d22f2b9f58",
+          "comment": "",
+          "command": "pause",
+          "target": "2000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "31f502f0-8688-40f2-9905-267c191d8ca0",
+          "comment": "",
+          "command": "assertElementNotPresent",
+          "target": "css=table.liste a[href*='/fourn/commande/card.php?id=']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d25f86eb-e0fc-4594-a106-df8832eb3a27",
+          "comment": "",
+          "command": "assertTextPresent",
+          "target": "(0)",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "3c3653e5-bc53-4a63-90a2-af6a3339471d",
+      "name": "PURCHASE_ORDER_Search_03",
+      "commands": [
+        {
+          "id": "29172b22-df96-4e85-a102-15107e707087",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bd5c6bd1-c89d-466c-9fbb-4f00e514b06e",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "da57c0c7-0d7a-422b-9db1-7b1947c94171",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "940e425b-d5a0-4b90-84ed-b91f6ba30ca4",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "71c5e496-9337-497e-a472-897f3a8fda55",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1235b506-c0ec-459f-aefa-4d1b0d9ad3db",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b654ad29-26b9-49fa-bf40-30640fc91f58",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9d15a32d-0a8a-4575-806a-46f36ea827c9",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b2bbf5c9-42a1-41a3-8081-d4e4017695c9",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "0885f7b0-9559-47ce-82ef-39d24b2a8e7d",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "de7b762c-f4dc-4bdb-b2d0-8ced10c73d7e",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c8c622a5-710d-4564-be28-edca0388199d",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bcc188d4-bad9-4234-bec5-fa37173bfb8b",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5b01dd62-da67-4404-a0dc-c3d806ca40d4",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='search_company']",
+          "targets": [],
+          "value": "${vendorName}"
+        },
+        {
+          "id": "9371464c-a47b-440b-a685-5f48672c73ed",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='search_company']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "28da8acf-56ea-443e-b6b9-8d520c62a796",
+          "comment": "",
+          "command": "pause",
+          "target": "2000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fe5a927c-2617-436b-bd1d-17d004075b8a",
+          "comment": "",
+          "command": "storeXpathCount",
+          "target": "//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]",
+          "targets": [],
+          "value": "rows"
+        },
+        {
+          "id": "e93193bf-006c-4951-b2fb-87781bd2ee0d",
+          "comment": "",
+          "command": "storeXpathCount",
+          "target": "(//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[contains(.,'${vendorName}')]",
+          "targets": [],
+          "value": "rowsVendor"
+        },
+        {
+          "id": "6173c787-6b83-4440-bcaa-0f5abe2d7ed0",
+          "comment": "",
+          "command": "assertEval",
+          "target": "${rows} == ${rowsVendor} && ${rows} > 0",
+          "targets": [],
+          "value": "true"
+        },
+        {
+          "id": "4ccdc502-6c76-4757-984e-506b42ec9318",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1a4a61ad-38e0-47e7-bdb3-83fc0ad50365",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "542c45fd-33e7-4366-b39d-0648418faab2",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d2ede9f3-e1b2-4525-9d59-67045c4bdce5",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "dbb1b66c-6464-47ac-a867-e5859f25f9b9",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "8ac4e85b-544e-45ef-b28d-498ddc6aa2fc",
+      "name": "PURCHASE_ORDER_Search_04",
+      "commands": [
+        {
+          "id": "2f75a280-d97a-4703-883d-d058df3f6562",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f034fc37-fda8-4bbb-b248-19e26c54ccb6",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "37acdf2e-915b-4408-9c9f-142799587d2b",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f8dc4bd7-0a6d-4507-ad7f-576e58f13812",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "30e76d58-fd92-4385-8893-a89a9dee35b4",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0f1b3d4a-a470-4415-ba81-ec8b51e6a28f",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2253a6f7-b645-48f1-accb-756e9a7b7626",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7920265f-5c36-4fe6-8f32-22341251e146",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b1318795-63a8-4fa2-93ac-6f767b749f50",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "44d8ccad-6b0f-4415-88d1-0e8f866c3c1b",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c73c25eb-d724-41ef-958f-b81744dbc067",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6a411e80-c94c-4f2d-b71f-290a9838a31f",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "558f9446-fe31-470d-9452-0a7ad78303db",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8bbacf70-7778-4f4a-a519-d76827543632",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": "PROV"
+        },
+        {
+          "id": "ab2f7dc1-19e8-4d72-9771-75646adc2596",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "dabc6a52-926c-4f08-8042-89e94c12a208",
+          "comment": "",
+          "command": "pause",
+          "target": "2000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d2e6225e-b650-426b-aa2d-bb65fa1864ff",
+          "comment": "",
+          "command": "storeXpathCount",
+          "target": "//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]",
+          "targets": [],
+          "value": "rows"
+        },
+        {
+          "id": "c34dd997-7e5e-4fd2-b224-04cb2fc34f5f",
+          "comment": "",
+          "command": "storeXpathCount",
+          "target": "//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]//a[starts-with(normalize-space(.),'(PROV')]",
+          "targets": [],
+          "value": "rowsProv"
+        },
+        {
+          "id": "69faef7c-9ee0-49e8-93ce-bbcce98c7901",
+          "comment": "",
+          "command": "assertEval",
+          "target": "${rows} == ${rowsProv} && ${rows} > 0",
+          "targets": [],
+          "value": "true"
+        },
+        {
+          "id": "76e9038e-426a-4baf-af9a-c6b815e78dcc",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3f2c10e3-c91c-4b32-b078-f90668633e62",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "284d28a1-7fe3-4c19-91bd-bc5536dd218f",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "df717d28-33e6-4a56-ae6c-a869898e5da4",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "63a93825-4a26-48d2-822c-3868963f4b50",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "1df95483-ce20-48bb-894d-6be084d5fad5",
+      "name": "PURCHASE_ORDER_Search_05",
+      "commands": [
+        {
+          "id": "4fd40703-12ae-4e8f-96dc-5c10014b8657",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c26c6124-31d6-4ccd-b929-1cc729c3fba8",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countBefore"
+        },
+        {
+          "id": "16dda906-d6da-4f23-ab4d-1178a053f6f7",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": "NOT_EXIST_999"
+        },
+        {
+          "id": "ce4ddf96-298a-4e20-8b51-b9df8eb3ab01",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "ad362f7b-a70b-4091-8b57-8020512b9e55",
+          "comment": "",
+          "command": "pause",
+          "target": "2000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6aff9295-96a1-4404-9306-b416591207f1",
+          "comment": "",
+          "command": "assertElementNotPresent",
+          "target": "css=table.liste a[href*='/fourn/commande/card.php?id=']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "601756a5-c9b5-4f98-89d0-2a11e2238474",
+          "comment": "",
+          "command": "click",
+          "target": "css=.button_removefilter",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "07fe24cc-d1f8-4ef4-b1f4-db9f2319486e",
+          "comment": "",
+          "command": "pause",
+          "target": "2000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "88cfb198-de03-4560-9f0f-564f6863c6c2",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=table.liste a[href*='/fourn/commande/card.php?id=']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5ff56880-c6da-4487-ab90-155a59cff596",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countAfter"
+        },
+        {
+          "id": "c562efff-b51e-4396-afcc-c8e5e21fbf82",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${countBefore}' == '${countAfter}'",
+          "targets": [],
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "id": "9fc8e556-288c-4801-9651-0f20a8bf46dc",
+      "name": "PURCHASE_ORDER_Search_06",
+      "commands": [
+        {
+          "id": "e4f9995f-0d53-43ff-a7ec-847c213e15ff",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bb056baf-62be-4869-a36e-ef8f66d5e019",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=table.liste a[href*='/fourn/commande/card.php?id=']",
+          "targets": [],
+          "value": "ref0"
+        },
+        {
+          "id": "ba5b16f9-b72e-409f-9b72-a6bedec489f4",
+          "comment": "",
+          "command": "click",
+          "target": "css=tr.liste_titre a[href*='sortfield=cf.ref']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "045e657f-b83b-439c-9cd9-8882652ffc69",
+          "comment": "",
+          "command": "pause",
+          "target": "2000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f848e72b-8ffc-4d4b-8308-9e5c84d71c4f",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=table.liste a[href*='/fourn/commande/card.php?id=']",
+          "targets": [],
+          "value": "ref1"
+        },
+        {
+          "id": "1cbabf56-c2fc-4d6c-bbda-969584c45363",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${ref0}' != '${ref1}'",
+          "targets": [],
+          "value": "true"
+        },
+        {
+          "id": "364e994e-524a-454b-8c14-f299fd173790",
+          "comment": "",
+          "command": "click",
+          "target": "css=tr.liste_titre a[href*='sortfield=cf.ref']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f47d3a51-b85e-4a29-8e80-c517619645d4",
+          "comment": "",
+          "command": "pause",
+          "target": "2000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "849c8576-a85e-41a4-bb18-f8e313eda715",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=table.liste a[href*='/fourn/commande/card.php?id=']",
+          "targets": [],
+          "value": "ref2"
+        },
+        {
+          "id": "a6c2c870-b0c2-4f58-ba87-9af4ffa1ca3c",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${ref2}' == '${ref0}'",
+          "targets": [],
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "id": "d77361ae-0778-44a3-aab7-13b8da91d4b0",
+      "name": "PURCHASE_ORDER_View_01",
+      "commands": [
+        {
+          "id": "db9001ef-d25a-4aae-a998-ba9368ca3f07",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5ec10012-5a53-45ab-8e56-bb349229b01e",
+          "comment": "",
+          "command": "click",
+          "target": "css=table.liste a[href*='/fourn/commande/card.php?id=']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "35b8fca5-2128-4d07-94dc-c09d88d7c3b4",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a[href*='/fourn/commande/note.php']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "4ff92b9b-3d91-4a67-9ab4-39fa85568b8e",
+      "name": "PURCHASE_ORDER_View_02",
+      "commands": [
+        {
+          "id": "ae55e6b9-dc9a-4285-957d-0db0e64132e0",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9c1151d4-8215-48ca-a884-70775ad1b2c5",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a231b9bb-a467-4f49-be94-31aaf3efcd5f",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d8453aed-df1c-4f66-9f00-0d511c8d5c0d",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "1bf0ec1f-2068-43bf-b95a-c4a6c6ead1df",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ba3b0375-c165-46dc-a1ed-6df13585dfdf",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "305dafd5-0180-401c-9267-bf444b22d908",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "26287813-aa93-4e7e-bab2-5fce141fb054",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6ecac9a3-50dd-4c4e-a091-dc56bc51b2e0",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "4ae85310-448f-4698-afc0-7aa48e0a2ffd",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e006bb79-5e24-463c-a9c9-aa4eda6093e2",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5fcb0667-8cd0-4869-b49d-ec5bec7b959c",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6ed7b9fd-446a-4e4b-aefd-d52ceb6c7d60",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='/fourn/commande/list.php?restore_lastsearch_values=1']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "301f276d-7a50-417e-a022-bc133d3a719b",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "58174554-acef-426b-9d08-e241f0abcc61",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=table.liste",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "42254b0a-f364-4730-85b1-e9cd74413c6d",
+          "comment": "",
+          "command": "open",
+          "target": "${cardUrl}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f2c83210-76c6-4cfb-8039-56149db700f5",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b24ab614-7510-455d-840b-206792a91bde",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5afce50c-c6bd-40a7-83d3-a2711cc1425c",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "20612e66-a834-4971-b377-20f5f649aa6b",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "ed6defa0-ec8d-49a5-8f78-1cb6ba5eb559",
+      "name": "PURCHASE_ORDER_Edit_01",
+      "commands": [
+        {
+          "id": "5f630081-5003-41dc-8af9-5243aa452fa6",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1580aec5-1729-40ec-b503-98d93a00ead7",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0d33f031-573d-4d3e-aac3-6a44c0c774eb",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "39060e90-e6c4-488a-95be-1e914a9bd95b",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "f2bef523-1088-47c5-99d2-ea844ba53256",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "afaa99a5-f3b2-415d-8319-cef43957ffb6",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c84b65d5-86d7-4069-88b8-925c00baa472",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fa121c31-822b-40fd-95eb-86544b573b2e",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f4c6ced1-b01e-4aee-81b0-8c5bd781f784",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "c64dd406-fd06-4584-a88f-d378d42780f2",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "12d691f3-ca23-41b0-b41e-b65d1ec1aff7",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5793626b-06bb-470e-be07-53410e137c99",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "92012be7-8997-41c9-bce4-48bcdfb3424d",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='editref_supplier']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2c1defe5-4492-4870-b7e1-691a6e3f9db3",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='ref_supplier']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ff758931-68cb-421d-b27a-308bd0597deb",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='ref_supplier']",
+          "targets": [],
+          "value": "RV_EDIT_01"
+        },
+        {
+          "id": "46135848-8d69-434f-9737-229d826251d5",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input[name='ref_supplier']",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "eec7d54a-81b9-4b6d-ae96-66ba5215ecf2",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "RV_EDIT_01",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5b01d123-eae8-4da1-b187-c81403b0804b",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e1775948-a4d9-4392-87c0-fa6c75087f67",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f0891278-4ee4-4dd3-a433-2b10a58b97cc",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "318912bd-1596-42aa-848e-03abc9db4832",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "a7412199-588b-4862-9c01-d548f1512c90",
+      "name": "PURCHASE_ORDER_Edit_02",
+      "commands": [
+        {
+          "id": "6d47ca97-0ac7-4de3-8eed-6ace598d31fd",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0c606608-db9b-47e9-9434-41ed24c72eb6",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0c5534ec-778e-4d65-ac67-1e25002fbb84",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e4782b5d-ac64-4f3e-8419-26f883bfe6f9",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "1bfb540b-4058-4220-b639-6857946749b4",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "621092c8-c00e-4bcc-82e2-37261782a94f",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "724163df-dda7-42ac-b8c3-a6c2b3aa176c",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0ceb0987-99f5-4267-a0ab-070c1644d7af",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3cfe9053-2310-4e32-9661-bd1dfd6a486e",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "16454cae-61fb-405d-8b4b-762273745991",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "908cb89a-73f5-4e6a-a67a-e6b5345c4ee2",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0dfef344-46df-4b40-8911-b876abb018a4",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cbbcdcf5-4d07-4667-8ee0-1a6b37a3ad36",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='editref_supplier']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3259b82e-c428-4e90-8c1b-2d3f8dfd3434",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='ref_supplier']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3831c877-5f0a-4054-9130-d274fced336a",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name='ref_supplier']",
+          "targets": [],
+          "value": "RV_NOEDIT_01"
+        },
+        {
+          "id": "246c6fdb-cf4e-4793-bad6-be2684c70436",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-cancel",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e91242ba-ddae-48c3-9ddc-e9bc39d3dc3d",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "018eb133-a222-42c6-be1a-0ca8dbfc8258",
+          "comment": "",
+          "command": "assertTextNotPresent",
+          "target": "RV_NOEDIT_01",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e8299b2f-318a-417a-bbf2-db5b7f56fe2c",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "32cb1e1c-db03-427a-a019-97c681191555",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "56b29b93-91e7-4903-a0a0-9aea900ac8a9",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8237a379-f7e0-4795-9de1-a3145117563c",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "5dea8e8f-516c-4fff-8bf3-21ed3981b426",
+      "name": "PURCHASE_ORDER_Lines_01",
+      "commands": [
+        {
+          "id": "c9acffc5-5fce-4ae3-a60b-cef875f5137c",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "75fe61f3-9ce7-4db8-a797-102e533fe2fb",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6d1bd137-0073-42b0-a7d9-ed7ee6f22ad8",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bf970efe-c8d9-49f7-b6d3-508c82581911",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "dc3cfff6-a747-420a-ad36-20b7a68590cf",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "86d34963-ee36-43a7-ba27-09be32c640d2",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "dcf016cd-9dfe-4ff3-97c7-55c7361b54a8",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "23814498-74a0-493f-9751-6cd8d126165b",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cfbdde72-f06f-4266-bc17-bea031bee650",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "148df254-10e2-4e6e-918a-da74f0129f57",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cd792272-a66a-43ca-a165-fe7038279844",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bccd516f-2e5d-4f7c-bd6b-3a3f70100a36",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a16fa119-a609-47ca-9742-8128937226cc",
+          "comment": "",
+          "command": "runScript",
+          "target": "var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5ea3a859-b665-41fc-90ab-2ec031933288",
+          "comment": "",
+          "command": "runScript",
+          "target": "var s=document.querySelector(\"select[name='type']\"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector(\"input[name='type'][value='1']\"); if (t) { t.checked = true; }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4b8850d5-4e0c-4aa6-b8d1-f362f1f42095",
+          "comment": "",
+          "command": "runScript",
+          "target": "if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 01'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 01'; } }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "768a0f77-d531-413d-8d2d-cf222f2fc954",
+          "comment": "",
+          "command": "type",
+          "target": "css=#price_ht",
+          "targets": [],
+          "value": "100"
+        },
+        {
+          "id": "c8c939bf-bacd-4459-9c57-d45980b2a073",
+          "comment": "",
+          "command": "type",
+          "target": "css=#qty",
+          "targets": [],
+          "value": "2"
+        },
+        {
+          "id": "6709f37f-c791-44b2-a05d-f8a4bc788632",
+          "comment": "",
+          "command": "click",
+          "target": "css=#addline",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d52d2cc9-4386-41d3-8c40-aa4de1b1b2e3",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//a[contains(@href,'action=ask_deleteline')])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9ed7889c-bf09-48a4-b801-e8fb65197f25",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5835d452-4b83-4d47-88b0-192c0c4a9a1d",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "Test line 01",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "80d8bc92-41ac-4fcf-9a17-8567a7ad7dfc",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "200",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "520394a8-683f-4e11-89c0-9a77131fa507",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "15fe2ab5-5420-4516-a7cf-ec30502f0dc9",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "acd8cb1b-1fc1-42cd-a0c0-49db30b6ab17",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a121bd56-d775-41ba-8e94-98dc6da795a6",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "c99f8eca-c3fb-4292-b5e7-a9ad1b15ed74",
+      "name": "PURCHASE_ORDER_Lines_02",
+      "commands": [
+        {
+          "id": "06a3f2e3-a76d-4714-866a-0fa25d8a64c7",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0c469437-f58d-4fb0-a3e3-d6dcc24a0ae5",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "86d236a6-4aec-4b0a-b8da-4f9d353e3414",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "71a5b95f-6585-4def-83b1-2901cc07f8fe",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "84821e57-cc08-4db8-85f3-d40c69e0177d",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1d883325-6e8c-4022-8cd4-1f62438de26d",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5f56d544-c628-4d92-be54-47bd18140c58",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "34d115c6-8f6f-4e11-a0b5-7be9ed098f4e",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d56f1f19-d2f7-4800-8814-b0869c4960f3",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "d51f4e79-ea4a-4052-b4c2-9a36fb306aaf",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b5d13fa6-00a3-4257-92c5-29289858a685",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e16725d4-4022-42fd-9c41-65b96a54b406",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "18620f19-f5a6-4259-807f-9eff2573e97e",
+          "comment": "",
+          "command": "runScript",
+          "target": "var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1e4415f5-b059-43ff-a9e6-c519132c27e1",
+          "comment": "",
+          "command": "runScript",
+          "target": "var s=document.querySelector(\"select[name='type']\"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector(\"input[name='type'][value='1']\"); if (t) { t.checked = true; }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "65cb60ae-4741-43ed-b544-3953d2171801",
+          "comment": "",
+          "command": "runScript",
+          "target": "if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 01'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 01'; } }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9549e3ce-643c-459f-be81-24c5bb38f4cb",
+          "comment": "",
+          "command": "type",
+          "target": "css=#price_ht",
+          "targets": [],
+          "value": "100"
+        },
+        {
+          "id": "5b8a5a4c-e68e-438d-a136-c83c086e7d80",
+          "comment": "",
+          "command": "type",
+          "target": "css=#qty",
+          "targets": [],
+          "value": "2"
+        },
+        {
+          "id": "dde771b7-175c-4aa0-ad3f-cc63fd0e0dbf",
+          "comment": "",
+          "command": "click",
+          "target": "css=#addline",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c5b1934f-0649-41bc-813b-2e9d13664b8d",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//a[contains(@href,'action=ask_deleteline')])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "251463c0-871d-42c8-9b5a-2f0cbf3bdfee",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "55814e69-cf00-4861-8a81-717a82302bea",
+          "comment": "",
+          "command": "runScript",
+          "target": "var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8ad6805b-d705-4867-bddd-d2d51db24cc6",
+          "comment": "",
+          "command": "runScript",
+          "target": "var s=document.querySelector(\"select[name='type']\"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector(\"input[name='type'][value='1']\"); if (t) { t.checked = true; }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "66455888-d35e-405a-ab86-a0c6d341f045",
+          "comment": "",
+          "command": "runScript",
+          "target": "if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 02'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 02'; } }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "956b9172-68b1-4c25-adbb-8a3cba5db71e",
+          "comment": "",
+          "command": "type",
+          "target": "css=#price_ht",
+          "targets": [],
+          "value": "50"
+        },
+        {
+          "id": "198a916f-69d8-40bd-a9d6-ca928286919b",
+          "comment": "",
+          "command": "type",
+          "target": "css=#qty",
+          "targets": [],
+          "value": "1"
+        },
+        {
+          "id": "3d997a5f-805b-4b4c-ad43-2d1ee8009ccb",
+          "comment": "",
+          "command": "click",
+          "target": "css=#addline",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d4028ec0-0896-4723-b065-0aa5893f3bb6",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//a[contains(@href,'action=ask_deleteline')])[2]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "12708506-0e6d-4d4d-89a5-6b63a324c7f3",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fa09867a-33a9-471e-abaf-11a0041a6215",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "Test line 01",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1af01948-8ad9-4f8c-bccb-84a30194ea22",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "Test line 02",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4c860c41-7aec-4b62-b57e-1336a3b59f1d",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "250",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c3a12a21-277f-4fee-bbcb-2ce2e4dff258",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7672eb7a-ce42-4fd7-8672-ad800d99b59c",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c6307e26-8b5a-41f3-9462-f7ae7f5bf727",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c12bc0b9-70dc-471d-b0ba-83546e81e7ee",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "69347254-9f65-4940-807a-76dd30a319dd",
+      "name": "PURCHASE_ORDER_Lines_03",
+      "commands": [
+        {
+          "id": "d4ac07b5-b540-4122-b0b1-b9efb1946bf2",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d3c954a5-eb5d-4c74-8705-b8ead42ffd08",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "53b13670-bb94-4c87-81fa-ebbb45d7ff0b",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "765fda19-fd5b-4c99-9622-21a3bdd7191b",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "d6fb8caa-f83e-468d-a9c2-4ed40d31b98c",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f75fd859-4f49-4540-ade4-1fdec026d38e",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "88b798b9-d312-4f1b-98e7-e2335288b21a",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9ef624b9-2cbb-4918-a2c8-4e543c5158c9",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "28c53897-4a13-4c48-992f-6fc0444954a4",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "ebcf578e-e736-4db0-af43-c595127bc4ac",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "334eaead-e0d7-4513-8b6e-98d7b7ba2e3b",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d4c74633-aed3-469b-9eb9-0af2f47695d8",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4173a3e9-dc42-47b9-9bde-2116ec7f49f0",
+          "comment": "",
+          "command": "runScript",
+          "target": "var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e6515389-17d9-4a1c-9672-74fa4c3f061d",
+          "comment": "",
+          "command": "runScript",
+          "target": "var s=document.querySelector(\"select[name='type']\"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector(\"input[name='type'][value='1']\"); if (t) { t.checked = true; }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "449b69c5-8171-4da3-94fa-4c8fc2c0df44",
+          "comment": "",
+          "command": "runScript",
+          "target": "if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 01'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 01'; } }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a1b54702-90e9-4260-9f60-f621bf3ff01d",
+          "comment": "",
+          "command": "type",
+          "target": "css=#price_ht",
+          "targets": [],
+          "value": "100"
+        },
+        {
+          "id": "5e12bdff-5d91-43f3-8006-e1a0ea82fe43",
+          "comment": "",
+          "command": "type",
+          "target": "css=#qty",
+          "targets": [],
+          "value": "2"
+        },
+        {
+          "id": "c901a1ba-d026-4d2b-b372-4dc1f9b3d9c9",
+          "comment": "",
+          "command": "click",
+          "target": "css=#addline",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "23f719f6-3348-49b7-8bcd-7783faffb257",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//a[contains(@href,'action=ask_deleteline')])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "57a6841b-dc5c-4175-84e4-77b920a9b5ee",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7fac51c6-6083-4361-b445-9b35755e6793",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "Test line 01",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9d6fef2e-50d8-4151-9f9a-b67cf687e13c",
+          "comment": "",
+          "command": "click",
+          "target": "css=a[href*='action=ask_deleteline']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "817b7f4b-3d79-480d-af19-3cf2f5fcd27c",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f8cdd513-cbf0-4d1b-b10b-4181de507619",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "049c997f-ebfd-4628-af6b-9d2005cc7115",
+          "comment": "",
+          "command": "pause",
+          "target": "2500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4de2d061-373b-4998-abb6-bd75f85ef9a9",
+          "comment": "",
+          "command": "assertTextNotPresent",
+          "target": "Test line 01",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "7480e767-181b-46c9-8039-e310881c8920",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "56bc8e89-b00e-484c-99e0-f141ddff97bb",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "9bcd8518-388a-4f22-adb7-220d33476af0",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "25c17dc9-e52a-4a50-9c46-c87f112bcb42",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "93c824de-3254-4891-b018-311824e1302c",
+      "name": "PURCHASE_ORDER_Lines_04",
+      "commands": [
+        {
+          "id": "447163f9-5d2a-46b9-a1df-07a79ba5bd67",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "96a91100-bb07-4e5f-965e-51b6ce381f0e",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fd51e5f6-1d01-4fba-a619-2279102ca3a5",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "eb310408-2112-4af6-8a1b-06a39b80cb8c",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "513ff2d9-4444-41fd-9209-3acf56339b64",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4ef909e5-f90b-4059-a506-002b81040ab2",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "578bb6fc-9304-42c8-acd9-e0c03bd15d80",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "98446b6c-d206-4d08-8dfe-c020287e86ba",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e5d5df0b-bdd0-4a6c-9c26-d9fd5878cf4f",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "b008fa6a-5458-44d1-9458-eb30c1ba95d7",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6d55d6b1-6528-47e8-ac12-2923b2275a34",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cc49142c-b337-42a6-9d41-a16e49f36ab0",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fb1ee891-b9df-4275-8333-b0635cb499ba",
+          "comment": "",
+          "command": "runScript",
+          "target": "var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f4c52b2d-2db7-48e0-a983-fc4c23c0379b",
+          "comment": "",
+          "command": "runScript",
+          "target": "var s=document.querySelector(\"select[name='type']\"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector(\"input[name='type'][value='1']\"); if (t) { t.checked = true; }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8486d211-eab1-4f31-86d0-5bba4f4203b9",
+          "comment": "",
+          "command": "runScript",
+          "target": "if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 03'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 03'; } }",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d51814bd-9034-4ae0-ba8a-b3df6bad98a8",
+          "comment": "",
+          "command": "type",
+          "target": "css=#price_ht",
+          "targets": [],
+          "value": "100"
+        },
+        {
+          "id": "b9194108-714a-401a-b2cd-b2d90da4676c",
+          "comment": "",
+          "command": "type",
+          "target": "css=#qty",
+          "targets": [],
+          "value": "2"
+        },
+        {
+          "id": "fd6eda3f-c5ff-4b57-972a-19854fe54d5c",
+          "comment": "",
+          "command": "type",
+          "target": "css=#remise_percent",
+          "targets": [],
+          "value": "10"
+        },
+        {
+          "id": "e58c0cca-0db9-461a-87d1-a06d63e6c67b",
+          "comment": "",
+          "command": "click",
+          "target": "css=#addline",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0c1af6c1-8df5-4ee7-b2a2-0cfe54f1aefe",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//a[contains(@href,'action=ask_deleteline')])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "18fd7eba-f765-4fcd-a9cf-55aaa5946d24",
+          "comment": "",
+          "command": "pause",
+          "target": "1500",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "99b869e9-dce6-4c1c-85f1-f2878bd578ab",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "Test line 03",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f1b7ca1b-a94a-4121-89c0-39637d4f30eb",
+          "comment": "",
+          "command": "waitForTextPresent",
+          "target": "180",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "243462c4-7552-4c83-8d85-ad5bfa5af3d4",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "67477f02-0981-4ad2-b737-d54f363bfdd8",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1bdc0d9d-1ee5-42c0-9167-dd03fb10592c",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e3a72ff7-564a-4aa0-b05c-a6ef14e40460",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "ec91774f-1254-4bc4-83ab-dead7fad8a68",
+      "name": "PURCHASE_ORDER_Delete_01",
+      "commands": [
+        {
+          "id": "267a1577-26ba-4d29-a163-24892a0d61ff",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/list.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2d56b116-267f-426b-9964-5f411e9fe790",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countBefore"
+        },
+        {
+          "id": "677be3f2-90a5-4e6b-a1ba-5f786de880fa",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c7609d80-69b1-49ce-82b5-1c8ed9c04173",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d6c46c31-4804-4436-8fba-c72cfe4ac03e",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e2719432-f97d-4f82-9650-17e4c5331cec",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "09b009ab-e377-4a07-80bb-64c61dcefa10",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "23f87257-a7ad-4b4c-9924-47a3ca29690c",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "80a030f5-dd05-4b52-803e-5fb7baa57e02",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a459882c-3478-42de-aa56-4d88f2428310",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "453399d6-e06c-4764-a37c-aa421fa6aad5",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "2ace10c8-df05-4a0f-b5da-51d78b5c515e",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "04fe3a92-d240-4ea5-8a89-a600ffe61c23",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d4a98c06-c2ea-4200-93ac-d463db47dfbf",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0e2d2a04-1ceb-4709-afcb-c69fe511d36d",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4a771683-7ff1-4a91-aeaf-bb74132cbd48",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a6105af2-acc6-4cbe-ba17-d8513b41f805",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f09181bb-8d87-40a1-9478-78e2e2ca9dfb",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "69b72aad-a2a2-49d5-9afd-a68b3c8f957e",
+          "comment": "",
+          "command": "storeText",
+          "target": "css=div.titre",
+          "targets": [],
+          "value": "countAfter"
+        },
+        {
+          "id": "faa3d7aa-8a90-4a99-89ad-cc7d2c16c18d",
+          "comment": "",
+          "command": "assertEval",
+          "target": "'${countBefore}' == '${countAfter}'",
+          "targets": [],
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "id": "5da63476-9cd4-4023-8819-707f11277b46",
+      "name": "PURCHASE_ORDER_Delete_02",
+      "commands": [
+        {
+          "id": "98f6632b-bd5c-4013-8581-0319ae4b060c",
+          "comment": "",
+          "command": "open",
+          "target": "https://demo.dolibarr.org/fourn/commande/card.php?action=create",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b779997c-bccd-48ab-b68e-9d9b4bcc1385",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6674a45b-d44a-4f82-ba00-9fb3cb97a113",
+          "comment": "",
+          "command": "click",
+          "target": "css=#select2-socid-container",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "21f9a28b-ea12-46de-83b3-204b19f365c8",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "css=input.select2-search__field",
+          "targets": [],
+          "value": "a"
+        },
+        {
+          "id": "a1824449-0ee9-42dd-b6c0-fdfd6a04fec3",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "49f86f28-a86c-4197-94de-ed99809852d0",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3258e34d-78d8-4c2b-a486-5fc414b4d77c",
+          "comment": "",
+          "command": "pause",
+          "target": "3000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "12fbb3b6-4b59-4a2e-8467-0a9296916903",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c859508d-a0ec-4a5a-b867-2c1a5552a848",
+          "comment": "",
+          "command": "storeText",
+          "target": "xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]",
+          "targets": [],
+          "value": "vendorName"
+        },
+        {
+          "id": "8aedfc4f-5122-48cf-8019-3552dddb31ec",
+          "comment": "",
+          "command": "click",
+          "target": "css=input.button-save",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3967b798-31a1-4b1b-98e0-ccc573221fe3",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bc75bd1e-65a4-4083-87b2-ba8b632ebc4b",
+          "comment": "",
+          "command": "storeLocation",
+          "target": "cardUrl",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5dd8e7aa-9830-49fc-96f2-bf2ea3adba4e",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "55e071d4-7689-47b2-9867-1a336b0a401a",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[2]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "dafc77d6-1f41-48cd-aa8b-1f2a32e4a2b1",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[2]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a9fbd02a-3a5b-4949-89a9-5d2c60357c31",
+          "comment": "",
+          "command": "assertElementPresent",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "fccdc571-e018-4613-bbfa-333630a28720",
+          "comment": "",
+          "command": "click",
+          "target": "css=a.butActionDelete",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a488ecf5-b692-40f3-92ac-adbf52f92a86",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1406868f-9e8b-460f-96b2-c597f4d33c19",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d934a5c5-4e02-41df-9a3e-226866f96c64",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=input[name='search_ref']",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "40b4c237-f7af-4838-9c44-8126cd5e4227",
+      "name": "23130094_BuiAnhHau_PurchaseOrders",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 300,
+      "tests": [
+        "ea8dc71f-a77a-4646-81dd-4e59d07afd8b",
+        "d509ff30-5584-4639-b088-18d723945253",
+        "810e02d2-fe62-4447-a457-1a329795cb24",
+        "2a3a3003-a9fc-4059-ab38-3cff7bb8ed97",
+        "2bc1721b-19a6-4fa1-bb79-0cb7efce191e",
+        "98341222-c1d5-42cc-bfaa-6abc261b2418",
+        "d02c9ed4-16d3-4adb-9965-72b8bee46a0b",
+        "595b7e90-2ecc-49f5-bbab-aa0f9fd29c7c",
+        "51b49c80-a8a3-4281-95ef-0e2ea6753e28",
+        "12dc5646-2d71-4f67-8362-0fcdc714cc55",
+        "aea2b26b-2fc6-4b3c-b742-74c34ff53230",
+        "fbb033d5-ab8f-420b-916c-7465f68e0ed2",
+        "d95df1c3-f48f-41a3-b82f-afffe3ff6229",
+        "807c27fa-1248-4d65-b7fb-900c95342b72",
+        "f25576a8-0f98-4f05-91bf-7f68cf67f731",
+        "3c3653e5-bc53-4a63-90a2-af6a3339471d",
+        "8ac4e85b-544e-45ef-b28d-498ddc6aa2fc",
+        "1df95483-ce20-48bb-894d-6be084d5fad5",
+        "9fc8e556-288c-4801-9651-0f20a8bf46dc",
+        "d77361ae-0778-44a3-aab7-13b8da91d4b0",
+        "4ff92b9b-3d91-4a67-9ab4-39fa85568b8e",
+        "ed6defa0-ec8d-49a5-8f78-1cb6ba5eb559",
+        "a7412199-588b-4862-9c01-d548f1512c90",
+        "5dea8e8f-516c-4fff-8bf3-21ed3981b426",
+        "c99f8eca-c3fb-4292-b5e7-a9ad1b15ed74",
+        "69347254-9f65-4940-807a-76dd30a319dd",
+        "93c824de-3254-4891-b018-311824e1302c",
+        "ec91774f-1254-4bc4-83ab-dead7fad8a68",
+        "5da63476-9cd4-4023-8819-707f11277b46"
+      ]
+    }
+  ],
+  "urls": [
+    "https://demo.dolibarr.org/"
+  ],
+  "plugins": []
+}
