@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>23130094_BuiAnhHau_Contact</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Setup_01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/public/demo/index.php<datalist><option>https://demo.dolibarr.org/public/demo/index.php</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//form[.//input[@type='checkbox']]//input[@type='submit'])[1]<datalist><option>xpath=(//form[.//input[@type='checkbox']]//input[@type='submit'])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>8000<datalist><option>8000</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/index.php?mainmenu=home&leftmenu=<datalist><option>https://demo.dolibarr.org/index.php?mainmenu=home&leftmenu=</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a[href*='mainmenu=commercial']<datalist><option>css=a[href*='mainmenu=commercial']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Create_01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='/contrat/card.php?action=create']<datalist><option>css=a[href*='/contrat/card.php?action=create']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Create_02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>Bên thứ ba<datalist><option>Bên thứ ba</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>Đại diện bán hàng theo dõi hợp đồng<datalist><option>Đại diện bán hàng theo dõi hợp đồng</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>Đại diện bán hàng ký hợp đồng<datalist><option>Đại diện bán hàng ký hợp đồng</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>Ngày<datalist><option>Ngày</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>Dự án<datalist><option>Dự án</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>Ghi chú (công khai)<datalist><option>Ghi chú (công khai)</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>Note (internal)<datalist><option>Note (internal)</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=input.button-cancel<datalist><option>css=input.button-cancel</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Create_03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>Testldr1<datalist><option>Testldr1</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]<datalist><option>xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Create_04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=textarea[name='note_private']<datalist><option>css=textarea[name='note_private']</option></datalist></td><td>Internal note 01</td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='/contrat/note.php']<datalist><option>css=a[href*='/contrat/note.php']</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>Internal note 01<datalist><option>Internal note 01</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>${cardUrl}<datalist><option>${cardUrl}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Create_05</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>Cần khai báo trường<datalist><option>Cần khai báo trường</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>Bên thứ ba<datalist><option>Bên thứ ba</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>Hợp đồng mới<datalist><option>Hợp đồng mới</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Create_06</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]<datalist><option>xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]</option></datalist></td><td>contractRef</td></tr>
+<tr><td>storeEval</td><td>'${contractRef}'.match(/\(PROV\d+\)/)[0]<datalist><option>'${contractRef}'.match(/\(PROV\d+\)/)[0]</option></datalist></td><td>contractRef</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>storeEval</td><td>'${contractRef}'.replace(/[()]/g,'')<datalist><option>'${contractRef}'.replace(/[()]/g,'')</option></datalist></td><td>searchRef</td></tr>
+<tr><td>type</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td>${searchRef}</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>${contractRef}<datalist><option>${contractRef}</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>link=${contractRef}<datalist><option>link=${contractRef}</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>${cardUrl}<datalist><option>${cardUrl}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Create_07</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td>countBefore</td></tr>
+<tr><td>click</td><td>css=a[href*='/contrat/card.php?action=create']<datalist><option>css=a[href*='/contrat/card.php?action=create']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-cancel<datalist><option>css=input.button-cancel</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td>countAfter</td></tr>
+<tr><td>assertEval</td><td>'${countBefore}' == '${countAfter}'<datalist><option>'${countBefore}' == '${countAfter}'</option></datalist></td><td>true</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Create_08</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td>countBefore</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl1<datalist><option>cardUrl1</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl2<datalist><option>cardUrl2</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td>countAfter</td></tr>
+<tr><td>storeEval</td><td>parseInt('${countBefore}'.match(/\((\d+)\)/)[1]) + 2<datalist><option>parseInt('${countBefore}'.match(/\((\d+)\)/)[1]) + 2</option></datalist></td><td>expected</td></tr>
+<tr><td>assertEval</td><td>'${countAfter}'.indexOf('(' + ${expected} + ')') >= 0<datalist><option>'${countAfter}'.indexOf('(' + ${expected} + ')') >= 0</option></datalist></td><td>true</td></tr>
+<tr><td>open</td><td>${cardUrl1}<datalist><option>${cardUrl1}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>${cardUrl2}<datalist><option>${cardUrl2}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Create_09</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=input#re<datalist><option>css=input#re</option></datalist></td><td>01/01/2026</td></tr>
+<tr><td>sendKeys</td><td>css=input#re<datalist><option>css=input#re</option></datalist></td><td>${KEY_TAB}</td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>01/01/2026<datalist><option>01/01/2026</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Create_10</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=textarea[name='note_private']<datalist><option>css=textarea[name='note_private']</option></datalist></td><td>Note @#$%&*()</td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='/contrat/note.php']<datalist><option>css=a[href*='/contrat/note.php']</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>Note @#$%&*()<datalist><option>Note @#$%&*()</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>${cardUrl}<datalist><option>${cardUrl}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Create_11</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'A'.repeat(1000)<datalist><option>'A'.repeat(1000)</option></datalist></td><td>longText</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=textarea[name='note_private']<datalist><option>css=textarea[name='note_private']</option></datalist></td><td>${longText}</td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>assertTextNotPresent</td><td>Fatal error<datalist><option>Fatal error</option></datalist></td><td></td></tr>
+<tr><td>assertTextNotPresent</td><td>SQL error<datalist><option>SQL error</option></datalist></td><td></td></tr>
+<tr><td>assertTextNotPresent</td><td>Exception<datalist><option>Exception</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_List_01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/index.php?mainmenu=home&leftmenu=<datalist><option>https://demo.dolibarr.org/index.php?mainmenu=home&leftmenu=</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='mainmenu=commercial']<datalist><option>css=a[href*='mainmenu=commercial']</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='/contrat/list.php']<datalist><option>css=a[href*='/contrat/list.php']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=table.liste<datalist><option>css=table.liste</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=table.liste<datalist><option>css=table.liste</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_List_02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=table.liste<datalist><option>css=table.liste</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=tr.liste_titre a[href*='sortfield=c.ref']<datalist><option>css=tr.liste_titre a[href*='sortfield=c.ref']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=tr.liste_titre a[href*='sortfield=c.ref_customer']<datalist><option>css=tr.liste_titre a[href*='sortfield=c.ref_customer']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=tr.liste_titre a[href*='sortfield=c.ref_supplier']<datalist><option>css=tr.liste_titre a[href*='sortfield=c.ref_supplier']</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>Bên thứ ba<datalist><option>Bên thứ ba</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=tr.liste_titre a[href*='sortfield=c.date_contrat']<datalist><option>css=tr.liste_titre a[href*='sortfield=c.date_contrat']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=.button_removefilter<datalist><option>css=.button_removefilter</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=button.button_search<datalist><option>css=button.button_search</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Search_01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=table.liste a[href*='/contrat/card.php?id=']<datalist><option>css=table.liste a[href*='/contrat/card.php?id=']</option></datalist></td><td>firstRef</td></tr>
+<tr><td>storeEval</td><td>'${firstRef}'.replace(/[()]/g,'')<datalist><option>'${firstRef}'.replace(/[()]/g,'')</option></datalist></td><td>searchRef</td></tr>
+<tr><td>type</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td>${searchRef}</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>${firstRef}<datalist><option>${firstRef}</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Search_02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td>NOT_EXIST_999</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>Không tìm thấy bản ghi<datalist><option>Không tìm thấy bản ghi</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>(0)<datalist><option>(0)</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Search_03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=input[name='search_name']<datalist><option>css=input[name='search_name']</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='search_name']<datalist><option>css=input[name='search_name']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>storeXpathCount</td><td>//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]<datalist><option>//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]</option></datalist></td><td>rows</td></tr>
+<tr><td>storeXpathCount</td><td>(//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[contains(.,'Testldr1')]<datalist><option>(//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[contains(.,'Testldr1')]</option></datalist></td><td>rowsTP</td></tr>
+<tr><td>assertEval</td><td>${rows} == ${rowsTP} && ${rows} > 0<datalist><option>${rows} == ${rowsTP} && ${rows} > 0</option></datalist></td><td>true</td></tr>
+<tr><td>open</td><td>${cardUrl}<datalist><option>${cardUrl}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Search_04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td>PROV</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>storeXpathCount</td><td>//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]<datalist><option>//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]</option></datalist></td><td>rows</td></tr>
+<tr><td>storeXpathCount</td><td>//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]//a[starts-with(normalize-space(.),'(PROV')]<datalist><option>//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]//a[starts-with(normalize-space(.),'(PROV')]</option></datalist></td><td>rowsProv</td></tr>
+<tr><td>assertEval</td><td>${rows} == ${rowsProv} && ${rows} > 0<datalist><option>${rows} == ${rowsProv} && ${rows} > 0</option></datalist></td><td>true</td></tr>
+<tr><td>open</td><td>${cardUrl}<datalist><option>${cardUrl}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Search_05</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td>countBefore</td></tr>
+<tr><td>type</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td>NOT_EXIST_999</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>Không tìm thấy bản ghi<datalist><option>Không tìm thấy bản ghi</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=.button_removefilter<datalist><option>css=.button_removefilter</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=table.liste a[href*='/contrat/card.php?id=']<datalist><option>css=table.liste a[href*='/contrat/card.php?id=']</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td>countAfter</td></tr>
+<tr><td>assertEval</td><td>'${countBefore}' == '${countAfter}'<datalist><option>'${countBefore}' == '${countAfter}'</option></datalist></td><td>true</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Search_06</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=table.liste a[href*='/contrat/card.php?id=']<datalist><option>css=table.liste a[href*='/contrat/card.php?id=']</option></datalist></td><td>ref0</td></tr>
+<tr><td>click</td><td>css=tr.liste_titre a[href*='sortfield=c.ref']<datalist><option>css=tr.liste_titre a[href*='sortfield=c.ref']</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=table.liste a[href*='/contrat/card.php?id=']<datalist><option>css=table.liste a[href*='/contrat/card.php?id=']</option></datalist></td><td>ref1</td></tr>
+<tr><td>assertEval</td><td>'${ref0}' != '${ref1}'<datalist><option>'${ref0}' != '${ref1}'</option></datalist></td><td>true</td></tr>
+<tr><td>click</td><td>css=tr.liste_titre a[href*='sortfield=c.ref']<datalist><option>css=tr.liste_titre a[href*='sortfield=c.ref']</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=table.liste a[href*='/contrat/card.php?id=']<datalist><option>css=table.liste a[href*='/contrat/card.php?id=']</option></datalist></td><td>ref2</td></tr>
+<tr><td>assertEval</td><td>'${ref2}' == '${ref0}'<datalist><option>'${ref2}' == '${ref0}'</option></datalist></td><td>true</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Search_07</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=tr.liste_titre a[href*='sortfield=c.date_contrat']<datalist><option>css=tr.liste_titre a[href*='sortfield=c.date_contrat']</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=((//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[1]//td[contains(.,'/')])[1]<datalist><option>xpath=((//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[1]//td[contains(.,'/')])[1]</option></datalist></td><td>date1</td></tr>
+<tr><td>click</td><td>css=tr.liste_titre a[href*='sortfield=c.date_contrat']<datalist><option>css=tr.liste_titre a[href*='sortfield=c.date_contrat']</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=((//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[1]//td[contains(.,'/')])[1]<datalist><option>xpath=((//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[1]//td[contains(.,'/')])[1]</option></datalist></td><td>date2</td></tr>
+<tr><td>assertEval</td><td>'${date1}' != '${date2}'<datalist><option>'${date1}' != '${date2}'</option></datalist></td><td>true</td></tr>
+<tr><td>click</td><td>css=tr.liste_titre a[href*='sortfield=c.date_contrat']<datalist><option>css=tr.liste_titre a[href*='sortfield=c.date_contrat']</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=((//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[1]//td[contains(.,'/')])[1]<datalist><option>xpath=((//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[1]//td[contains(.,'/')])[1]</option></datalist></td><td>date3</td></tr>
+<tr><td>assertEval</td><td>'${date3}' == '${date1}'<datalist><option>'${date3}' == '${date1}'</option></datalist></td><td>true</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_View_01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=table.liste a[href*='/contrat/card.php?id=']<datalist><option>css=table.liste a[href*='/contrat/card.php?id=']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a[href*='/contrat/note.php']<datalist><option>css=a[href*='/contrat/note.php']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=a[href*='/contrat/note.php']<datalist><option>css=a[href*='/contrat/note.php']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_View_02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='/contrat/list.php?restore_lastsearch_values=1']<datalist><option>css=a[href*='/contrat/list.php?restore_lastsearch_values=1']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=table.liste<datalist><option>css=table.liste</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=table.liste<datalist><option>css=table.liste</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>${cardUrl}<datalist><option>${cardUrl}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Edit_01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='editref_customer']<datalist><option>css=a[href*='editref_customer']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='ref_customer']<datalist><option>css=input[name='ref_customer']</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=input[name='ref_customer']<datalist><option>css=input[name='ref_customer']</option></datalist></td><td>RC_EDIT_01</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='ref_customer']<datalist><option>css=input[name='ref_customer']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>waitForTextPresent</td><td>RC_EDIT_01<datalist><option>RC_EDIT_01</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Edit_02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='editref_customer']<datalist><option>css=a[href*='editref_customer']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='ref_customer']<datalist><option>css=input[name='ref_customer']</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=input[name='ref_customer']<datalist><option>css=input[name='ref_customer']</option></datalist></td><td>RC_NOEDIT_01</td></tr>
+<tr><td>click</td><td>css=input.button-cancel<datalist><option>css=input.button-cancel</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>assertTextNotPresent</td><td>RC_NOEDIT_01<datalist><option>RC_NOEDIT_01</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Delete_01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/list.php?leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td>countBefore</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td>countAfter</td></tr>
+<tr><td>assertEval</td><td>'${countBefore}' == '${countAfter}'<datalist><option>'${countBefore}' == '${countAfter}'</option></datalist></td><td>true</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CONTRACT_Delete_02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts<datalist><option>https://demo.dolibarr.org/contrat/card.php?action=create&leftmenu=contracts</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>Testldr1</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]<datalist><option>xpath=//li[contains(@class,'select2-results__option') and contains(.,'Testldr1')]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[2]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[2]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[2]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[2]</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_contract']<datalist><option>css=input[name='search_contract']</option></datalist></td><td></td></tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>23130094_BuiAnhHau_SupplierInvoices</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Setup_01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/public/demo/index.php<datalist><option>https://demo.dolibarr.org/public/demo/index.php</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//form[.//input[@type='checkbox']]//input[@type='submit'])[1]<datalist><option>xpath=(//form[.//input[@type='checkbox']]//input[@type='submit'])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>8000<datalist><option>8000</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/index.php?mainmenu=home&leftmenu=<datalist><option>https://demo.dolibarr.org/index.php?mainmenu=home&leftmenu=</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a[href*='mainmenu=billing']<datalist><option>css=a[href*='mainmenu=billing']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Create_01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/list.php<datalist><option>https://demo.dolibarr.org/fourn/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='/fourn/facture/card.php?action=create']<datalist><option>css=a[href*='/fourn/facture/card.php?action=create']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Create_02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=input[name='type']<datalist><option>css=input[name='type']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=#re<datalist><option>css=#re</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=#ech<datalist><option>css=#ech</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=select[name='cond_reglement_id']<datalist><option>css=select[name='cond_reglement_id']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=select[name='mode_reglement_id']<datalist><option>css=select[name='mode_reglement_id']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=textarea[name='note_public']<datalist><option>css=textarea[name='note_public']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=textarea[name='note_private']<datalist><option>css=textarea[name='note_private']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=input.button-cancel<datalist><option>css=input.button-cancel</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Create_03</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]<datalist><option>xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>${refSupplier}<datalist><option>${refSupplier}</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>${vendorName}<datalist><option>${vendorName}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Create_04</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=textarea[name='note_private']<datalist><option>css=textarea[name='note_private']</option></datalist></td><td>Internal note 01</td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='/fourn/facture/note.php']<datalist><option>css=a[href*='/fourn/facture/note.php']</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>Internal note 01<datalist><option>Internal note 01</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>${cardUrl}<datalist><option>${cardUrl}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Create_05</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>2000<datalist><option>2000</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=.jnotify-error, .jnotify-notification<datalist><option>css=.jnotify-error, .jnotify-notification</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>assertElementNotPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Create_06</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>2000<datalist><option>2000</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=.jnotify-error, .jnotify-notification<datalist><option>css=.jnotify-error, .jnotify-notification</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>assertElementNotPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Create_07</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]<datalist><option>xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]</option></datalist></td><td>invoiceRef</td></tr>
+<tr><td>storeEval</td><td>'${invoiceRef}'.match(/\(PROV\d+\)/)[0]<datalist><option>'${invoiceRef}'.match(/\(PROV\d+\)/)[0]</option></datalist></td><td>invoiceRef</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/list.php<datalist><option>https://demo.dolibarr.org/fourn/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>storeEval</td><td>'${invoiceRef}'.replace(/[()]/g,'')<datalist><option>'${invoiceRef}'.replace(/[()]/g,'')</option></datalist></td><td>searchRef</td></tr>
+<tr><td>type</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td>${searchRef}</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>${invoiceRef}<datalist><option>${invoiceRef}</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>link=${invoiceRef}<datalist><option>link=${invoiceRef}</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>${cardUrl}<datalist><option>${cardUrl}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Create_08</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/list.php<datalist><option>https://demo.dolibarr.org/fourn/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td>countBefore</td></tr>
+<tr><td>click</td><td>css=a[href*='/fourn/facture/card.php?action=create']<datalist><option>css=a[href*='/fourn/facture/card.php?action=create']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-cancel<datalist><option>css=input.button-cancel</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>assertElementNotPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/list.php<datalist><option>https://demo.dolibarr.org/fourn/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td>countAfter</td></tr>
+<tr><td>assertEval</td><td>'${countBefore}' == '${countAfter}'<datalist><option>'${countBefore}' == '${countAfter}'</option></datalist></td><td>true</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Create_09</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=textarea[name='note_private']<datalist><option>css=textarea[name='note_private']</option></datalist></td><td>Note @#$%&*()</td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='/fourn/facture/note.php']<datalist><option>css=a[href*='/fourn/facture/note.php']</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>Note @#$%&*()<datalist><option>Note @#$%&*()</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>${cardUrl}<datalist><option>${cardUrl}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Create_10</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'A'.repeat(1000)<datalist><option>'A'.repeat(1000)</option></datalist></td><td>longText</td></tr>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=textarea[name='note_private']<datalist><option>css=textarea[name='note_private']</option></datalist></td><td>${longText}</td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>assertTextNotPresent</td><td>Fatal error<datalist><option>Fatal error</option></datalist></td><td></td></tr>
+<tr><td>assertTextNotPresent</td><td>SQL error<datalist><option>SQL error</option></datalist></td><td></td></tr>
+<tr><td>assertTextNotPresent</td><td>Exception<datalist><option>Exception</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_List_01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/index.php?mainmenu=home&leftmenu=<datalist><option>https://demo.dolibarr.org/index.php?mainmenu=home&leftmenu=</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='mainmenu=billing']<datalist><option>css=a[href*='mainmenu=billing']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a[href*='/fourn/facture/list.php']<datalist><option>css=a[href*='/fourn/facture/list.php']</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='/fourn/facture/list.php']<datalist><option>css=a[href*='/fourn/facture/list.php']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=table.liste<datalist><option>css=table.liste</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_List_02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/list.php<datalist><option>https://demo.dolibarr.org/fourn/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=tr.liste_titre a[href*='sortfield=f.ref']<datalist><option>css=tr.liste_titre a[href*='sortfield=f.ref']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=tr.liste_titre a[href*='sortfield=f.ref_supplier']<datalist><option>css=tr.liste_titre a[href*='sortfield=f.ref_supplier']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=tr.liste_titre a[href*='datef']<datalist><option>css=tr.liste_titre a[href*='datef']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=tr.liste_titre a[href*='date_lim_reglement']<datalist><option>css=tr.liste_titre a[href*='date_lim_reglement']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=tr.liste_titre a[href*='s.nom']<datalist><option>css=tr.liste_titre a[href*='s.nom']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=tr.liste_titre a[href*='total_ht']<datalist><option>css=tr.liste_titre a[href*='total_ht']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=tr.liste_titre a[href*='total_ttc']<datalist><option>css=tr.liste_titre a[href*='total_ttc']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=tr.liste_titre a[href*='fk_statut']<datalist><option>css=tr.liste_titre a[href*='fk_statut']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=input[name='search_company']<datalist><option>css=input[name='search_company']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=.button_removefilter<datalist><option>css=.button_removefilter</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=button.button_search<datalist><option>css=button.button_search</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Search_01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/list.php<datalist><option>https://demo.dolibarr.org/fourn/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=table.liste a[href*='/fourn/facture/card.php?']<datalist><option>css=table.liste a[href*='/fourn/facture/card.php?']</option></datalist></td><td>firstRef</td></tr>
+<tr><td>storeEval</td><td>'${firstRef}'.replace(/[()]/g,'')<datalist><option>'${firstRef}'.replace(/[()]/g,'')</option></datalist></td><td>searchRef</td></tr>
+<tr><td>type</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td>${searchRef}</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>${firstRef}<datalist><option>${firstRef}</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>link=${firstRef}<datalist><option>link=${firstRef}</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Search_02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/list.php<datalist><option>https://demo.dolibarr.org/fourn/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td>NOT_EXIST_999</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>2000<datalist><option>2000</option></datalist></td><td></td></tr>
+<tr><td>assertElementNotPresent</td><td>css=table.liste a[href*='/fourn/facture/card.php?']<datalist><option>css=table.liste a[href*='/fourn/facture/card.php?']</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>(0)<datalist><option>(0)</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Search_03</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/list.php<datalist><option>https://demo.dolibarr.org/fourn/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=input[name='search_company']<datalist><option>css=input[name='search_company']</option></datalist></td><td>${vendorName}</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='search_company']<datalist><option>css=input[name='search_company']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>2000<datalist><option>2000</option></datalist></td><td></td></tr>
+<tr><td>storeXpathCount</td><td>//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]<datalist><option>//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]</option></datalist></td><td>rows</td></tr>
+<tr><td>storeXpathCount</td><td>(//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[contains(.,'${vendorName}')]<datalist><option>(//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[contains(.,'${vendorName}')]</option></datalist></td><td>rowsVendor</td></tr>
+<tr><td>assertEval</td><td>${rows} == ${rowsVendor} && ${rows} > 0<datalist><option>${rows} == ${rowsVendor} && ${rows} > 0</option></datalist></td><td>true</td></tr>
+<tr><td>open</td><td>${cardUrl}<datalist><option>${cardUrl}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Search_04</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/list.php<datalist><option>https://demo.dolibarr.org/fourn/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>var s=document.querySelector("select[name='search_status']"); var ok=false; if (s) { for (var i=0;i<s.options.length;i++) { if (s.options[i].value=='0') { s.selectedIndex=i; ok=true; break; } } } if (ok) { if (window.jQuery) { jQuery(s).trigger('change'); } s.form.submit(); } else { var a=document.querySelector("a[href*='search_status=0']"); if (a) { window.location.href=a.href; } }<datalist><option>var s=document.querySelector("select[name='search_status']"); var ok=false; if (s) { for (var i=0;i<s.options.length;i++) { if (s.options[i].value=='0') { s.selectedIndex=i; ok=true; break; } } } if (ok) { if (window.jQuery) { jQuery(s).trigger('change'); } s.form.submit(); } else { var a=document.querySelector("a[href*='search_status=0']"); if (a) { window.location.href=a.href; } }</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=table.liste<datalist><option>css=table.liste</option></datalist></td><td></td></tr>
+<tr><td>storeXpathCount</td><td>//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]<datalist><option>//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')]</option></datalist></td><td>rows</td></tr>
+<tr><td>storeXpathCount</td><td>(//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[.//span[contains(@class,'badge-status0')]]<datalist><option>(//table[contains(@class,'liste')]//tr[contains(@class,'oddeven')])[.//span[contains(@class,'badge-status0')]]</option></datalist></td><td>rowsDraft</td></tr>
+<tr><td>assertEval</td><td>${rows} == ${rowsDraft} && ${rows} > 0<datalist><option>${rows} == ${rowsDraft} && ${rows} > 0</option></datalist></td><td>true</td></tr>
+<tr><td>open</td><td>${cardUrl}<datalist><option>${cardUrl}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Search_05</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/list.php<datalist><option>https://demo.dolibarr.org/fourn/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td>countBefore</td></tr>
+<tr><td>type</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td>NOT_EXIST_999</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>2000<datalist><option>2000</option></datalist></td><td></td></tr>
+<tr><td>assertElementNotPresent</td><td>css=table.liste a[href*='/fourn/facture/card.php?']<datalist><option>css=table.liste a[href*='/fourn/facture/card.php?']</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=.button_removefilter<datalist><option>css=.button_removefilter</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>2000<datalist><option>2000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=table.liste a[href*='/fourn/facture/card.php?']<datalist><option>css=table.liste a[href*='/fourn/facture/card.php?']</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=div.titre<datalist><option>css=div.titre</option></datalist></td><td>countAfter</td></tr>
+<tr><td>assertEval</td><td>'${countBefore}' == '${countAfter}'<datalist><option>'${countBefore}' == '${countAfter}'</option></datalist></td><td>true</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Search_06</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/list.php?sortfield=f.ref&sortorder=asc<datalist><option>https://demo.dolibarr.org/fourn/facture/list.php?sortfield=f.ref&sortorder=asc</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=table.liste a[href*='/fourn/facture/card.php?']<datalist><option>css=table.liste a[href*='/fourn/facture/card.php?']</option></datalist></td><td>ref0</td></tr>
+<tr><td>click</td><td>css=tr.liste_titre a[href*='sortfield=f.ref']<datalist><option>css=tr.liste_titre a[href*='sortfield=f.ref']</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>2000<datalist><option>2000</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=table.liste a[href*='/fourn/facture/card.php?']<datalist><option>css=table.liste a[href*='/fourn/facture/card.php?']</option></datalist></td><td>ref1</td></tr>
+<tr><td>assertEval</td><td>'${ref0}' != '${ref1}'<datalist><option>'${ref0}' != '${ref1}'</option></datalist></td><td>true</td></tr>
+<tr><td>click</td><td>css=tr.liste_titre a[href*='sortfield=f.ref']<datalist><option>css=tr.liste_titre a[href*='sortfield=f.ref']</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>2000<datalist><option>2000</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=table.liste a[href*='/fourn/facture/card.php?']<datalist><option>css=table.liste a[href*='/fourn/facture/card.php?']</option></datalist></td><td>ref2</td></tr>
+<tr><td>assertEval</td><td>'${ref2}' == '${ref0}'<datalist><option>'${ref2}' == '${ref0}'</option></datalist></td><td>true</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_View_01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/list.php<datalist><option>https://demo.dolibarr.org/fourn/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=table.liste a[href*='/fourn/facture/card.php?']<datalist><option>css=table.liste a[href*='/fourn/facture/card.php?']</option></datalist></td><td>listRef</td></tr>
+<tr><td>click</td><td>css=table.liste a[href*='/fourn/facture/card.php?']<datalist><option>css=table.liste a[href*='/fourn/facture/card.php?']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a[href*='/fourn/facture/note.php']<datalist><option>css=a[href*='/fourn/facture/note.php']</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>${listRef}<datalist><option>${listRef}</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_View_02</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='/fourn/facture/list.php?restore_lastsearch_values=1']<datalist><option>css=a[href*='/fourn/facture/list.php?restore_lastsearch_values=1']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=table.liste<datalist><option>css=table.liste</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>${cardUrl}<datalist><option>${cardUrl}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Edit_01</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>storeEval</td><td>'RV_EDIT_01' + Date.now()<datalist><option>'RV_EDIT_01' + Date.now()</option></datalist></td><td>newRefSupplier</td></tr>
+<tr><td>click</td><td>css=a[href*='editref_supplier']<datalist><option>css=a[href*='editref_supplier']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${newRefSupplier}</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>waitForTextPresent</td><td>${newRefSupplier}<datalist><option>${newRefSupplier}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Edit_02</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='editref_supplier']<datalist><option>css=a[href*='editref_supplier']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>RV_NOEDIT_01</td></tr>
+<tr><td>click</td><td>css=input.button-cancel<datalist><option>css=input.button-cancel</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>assertTextNotPresent</td><td>RV_NOEDIT_01<datalist><option>RV_NOEDIT_01</option></datalist></td><td></td></tr>
+<tr><td>assertTextPresent</td><td>${refSupplier}<datalist><option>${refSupplier}</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Lines_01</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }<datalist><option>var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>var s=document.querySelector("select[name='type']"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector("input[name='type'][value='1']"); if (t) { t.checked = true; }<datalist><option>var s=document.querySelector("select[name='type']"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector("input[name='type'][value='1']"); if (t) { t.checked = true; }</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 01'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 01'; } }<datalist><option>if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 01'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 01'; } }</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=#price_ht<datalist><option>css=#price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>css=#qty<datalist><option>css=#qty</option></datalist></td><td>2</td></tr>
+<tr><td>click</td><td>css=#addline<datalist><option>css=#addline</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//a[contains(@href,'action=ask_deleteline')])[1]<datalist><option>xpath=(//a[contains(@href,'action=ask_deleteline')])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>Test line 01<datalist><option>Test line 01</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>200<datalist><option>200</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Lines_02</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }<datalist><option>var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>var s=document.querySelector("select[name='type']"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector("input[name='type'][value='1']"); if (t) { t.checked = true; }<datalist><option>var s=document.querySelector("select[name='type']"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector("input[name='type'][value='1']"); if (t) { t.checked = true; }</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 01'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 01'; } }<datalist><option>if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 01'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 01'; } }</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=#price_ht<datalist><option>css=#price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>css=#qty<datalist><option>css=#qty</option></datalist></td><td>2</td></tr>
+<tr><td>click</td><td>css=#addline<datalist><option>css=#addline</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//a[contains(@href,'action=ask_deleteline')])[1]<datalist><option>xpath=(//a[contains(@href,'action=ask_deleteline')])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }<datalist><option>var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>var s=document.querySelector("select[name='type']"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector("input[name='type'][value='1']"); if (t) { t.checked = true; }<datalist><option>var s=document.querySelector("select[name='type']"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector("input[name='type'][value='1']"); if (t) { t.checked = true; }</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 02'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 02'; } }<datalist><option>if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 02'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 02'; } }</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=#price_ht<datalist><option>css=#price_ht</option></datalist></td><td>50</td></tr>
+<tr><td>type</td><td>css=#qty<datalist><option>css=#qty</option></datalist></td><td>1</td></tr>
+<tr><td>click</td><td>css=#addline<datalist><option>css=#addline</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//a[contains(@href,'action=ask_deleteline')])[2]<datalist><option>xpath=(//a[contains(@href,'action=ask_deleteline')])[2]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>Test line 01<datalist><option>Test line 01</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>Test line 02<datalist><option>Test line 02</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>250<datalist><option>250</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Lines_03</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }<datalist><option>var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>var s=document.querySelector("select[name='type']"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector("input[name='type'][value='1']"); if (t) { t.checked = true; }<datalist><option>var s=document.querySelector("select[name='type']"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector("input[name='type'][value='1']"); if (t) { t.checked = true; }</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 01'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 01'; } }<datalist><option>if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 01'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 01'; } }</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=#price_ht<datalist><option>css=#price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>css=#qty<datalist><option>css=#qty</option></datalist></td><td>2</td></tr>
+<tr><td>click</td><td>css=#addline<datalist><option>css=#addline</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//a[contains(@href,'action=ask_deleteline')])[1]<datalist><option>xpath=(//a[contains(@href,'action=ask_deleteline')])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>Test line 01<datalist><option>Test line 01</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a[href*='action=ask_deleteline']<datalist><option>css=a[href*='action=ask_deleteline']</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>2500<datalist><option>2500</option></datalist></td><td></td></tr>
+<tr><td>assertTextNotPresent</td><td>Test line 01<datalist><option>Test line 01</option></datalist></td><td></td></tr>
+<tr><td>assertElementNotPresent</td><td>css=a[href*='action=ask_deleteline']<datalist><option>css=a[href*='action=ask_deleteline']</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Lines_04</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }<datalist><option>var r=document.getElementById('prod_entry_mode_free'); if (r) { r.click(); }</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>var s=document.querySelector("select[name='type']"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector("input[name='type'][value='1']"); if (t) { t.checked = true; }<datalist><option>var s=document.querySelector("select[name='type']"); if (s) { s.value='1'; s.dispatchEvent(new Event('change',{bubbles:true})); if (window.jQuery) { jQuery(s).trigger('change'); } } var t=document.querySelector("input[name='type'][value='1']"); if (t) { t.checked = true; }</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 03'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 03'; } }<datalist><option>if (window.CKEDITOR && CKEDITOR.instances['dp_desc']) { CKEDITOR.instances['dp_desc'].setData('Test line 03'); } else { var d=document.getElementById('dp_desc'); if (d) { d.value='Test line 03'; } }</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=#price_ht<datalist><option>css=#price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>css=#qty<datalist><option>css=#qty</option></datalist></td><td>2</td></tr>
+<tr><td>type</td><td>css=#remise_percent<datalist><option>css=#remise_percent</option></datalist></td><td>10</td></tr>
+<tr><td>click</td><td>css=#addline<datalist><option>css=#addline</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//a[contains(@href,'action=ask_deleteline')])[1]<datalist><option>xpath=(//a[contains(@href,'action=ask_deleteline')])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1500<datalist><option>1500</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>Test line 03<datalist><option>Test line 03</option></datalist></td><td></td></tr>
+<tr><td>waitForTextPresent</td><td>180<datalist><option>180</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Delete_01</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]<datalist><option>xpath=(//*[starts-with(normalize-space(text()),'(PROV')])[1]</option></datalist></td><td>invoiceRef</td></tr>
+<tr><td>storeEval</td><td>'${invoiceRef}'.match(/\(PROV\d+\)/)[0]<datalist><option>'${invoiceRef}'.match(/\(PROV\d+\)/)[0]</option></datalist></td><td>invoiceRef</td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+<tr><td>storeEval</td><td>'${invoiceRef}'.replace(/[()]/g,'')<datalist><option>'${invoiceRef}'.replace(/[()]/g,'')</option></datalist></td><td>searchRef</td></tr>
+<tr><td>type</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td>${searchRef}</td></tr>
+<tr><td>sendKeys</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>2000<datalist><option>2000</option></datalist></td><td></td></tr>
+<tr><td>assertElementNotPresent</td><td>link=${invoiceRef}<datalist><option>link=${invoiceRef}</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">SUPPLIER_INVOICE_Delete_02</td></tr>
+</thead>
+<tbody>
+<tr><td>storeEval</td><td>'SI_' + Date.now()<datalist><option>'SI_' + Date.now()</option></datalist></td><td>refSupplier</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/fourn/facture/card.php?action=create<datalist><option>https://demo.dolibarr.org/fourn/facture/card.php?action=create</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#select2-socid-container<datalist><option>css=#select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>sendKeys</td><td>css=input.select2-search__field<datalist><option>css=input.select2-search__field</option></datalist></td><td>a</td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]<datalist><option>xpath=(//li[contains(@class,'select2-results__option') and not(contains(@class,'select2-results__message')) and string-length(translate(normalize-space(.),' ',''))>0 and normalize-space(.)!=normalize-space(//*[@id='select2-socid-container'])])[1]</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]<datalist><option>xpath=//td[contains(@class,'fieldrequired')]/following-sibling::td[1]</option></datalist></td><td>vendorName</td></tr>
+<tr><td>type</td><td>css=input[name='ref_supplier']<datalist><option>css=input[name='ref_supplier']</option></datalist></td><td>${refSupplier}</td></tr>
+<tr><td>runScript</td><td>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }<datalist><option>var d=new Date(),dd=('0'+d.getDate()).slice(-2),mm=('0'+(d.getMonth()+1)).slice(-2),yy=d.getFullYear();function sv(n,v){var e=document.querySelector("[name='"+n+"']"); if(e){e.value=v;}}sv('reday',dd);sv('remonth',mm);sv('reyear',yy);var t=document.getElementById('re'); if(t){ t.value=(t.type=='date')?(yy+'-'+mm+'-'+dd):(dd+'/'+mm+'/'+yy); }</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=input.button-save<datalist><option>css=input.button-save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>cardUrl<datalist><option>cardUrl</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[2]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[2]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[2]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[2]</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>assertElementPresent</td><td>css=a[href*='editref_supplier']<datalist><option>css=a[href*='editref_supplier']</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=a.butActionDelete<datalist><option>css=a.butActionDelete</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]<datalist><option>xpath=(//div[contains(@class,'ui-dialog-buttonset')]//button)[1]</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=input[name='search_ref']<datalist><option>css=input[name='search_ref']</option></datalist></td><td></td></tr>
+<tr><td></td><td><datalist></datalist></td><td></td></tr>
+</tbody></table>
+</body>
+</html>
