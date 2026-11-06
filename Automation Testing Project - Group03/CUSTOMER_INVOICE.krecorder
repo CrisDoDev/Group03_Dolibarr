@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>CUSTOMER_INVOICES</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">INVOICE_SETUP</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/commande/card.php?action=create&socid=34<datalist><option>https://demo.dolibarr.org/commande/card.php?action=create&socid=34</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-I-PRE</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>storeLocation</td><td>ordUrl2<datalist><option>ordUrl2</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 line A');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 line A');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 line A')]<datalist><option>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 line A')]</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=validate']<datalist><option>css=a.butAction[href*='action=validate']</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=div.statusref<datalist><option>css=div.statusref</option></datalist></td><td>glob:*Validated*</td></tr>
+<tr><td>verifyText</td><td>css=div.refid > span.valignmiddle<datalist><option>css=div.refid > span.valignmiddle</option></datalist></td><td>glob:CO*</td></tr>
+<tr><td>storeText</td><td>css=div.refid > span.valignmiddle<datalist><option>css=div.refid > span.valignmiddle</option></datalist></td><td>ordRef</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_INVOICE-01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/card.php?action=create&leftmenu=customers_bills<datalist><option>https://demo.dolibarr.org/compta/facture/card.php?action=create&leftmenu=customers_bills</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Customer' is required<datalist><option>Field 'Customer' is required</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_INVOICE-02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/card.php?action=create&leftmenu=customers_bills<datalist><option>https://demo.dolibarr.org/compta/facture/card.php?action=create&leftmenu=customers_bills</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=#radio_standard:checked<datalist><option>css=#radio_standard:checked</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=#radio_standard:not([disabled])<datalist><option>css=#radio_standard:not([disabled])</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=#radio_deposit:not([disabled])<datalist><option>css=#radio_deposit:not([disabled])</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=#radio_situation[disabled]<datalist><option>css=#radio_situation[disabled]</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=#radio_replacement[disabled]<datalist><option>css=#radio_replacement[disabled]</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=#radio_creditnote[disabled]<datalist><option>css=#radio_creditnote[disabled]</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_INVOICE-03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${ordUrl2}&leftmenu=orders<datalist><option>${ordUrl2}&leftmenu=orders</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>document.querySelector("a[href*='/compta/facture/card.php'][href*='origin=commande']").click();<datalist><option>document.querySelector("a[href*='/compta/facture/card.php'][href*='origin=commande']").click();</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save<datalist><option>name=save</option></datalist></td><td>10000</td></tr>
+<tr><td>verifyElementPresent</td><td>css=#radio_standard:checked<datalist><option>css=#radio_standard:checked</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-I03</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=div.refid > span.valignmiddle<datalist><option>css=div.refid > span.valignmiddle</option></datalist></td><td>glob:*PROV*</td></tr>
+<tr><td>verifyText</td><td>css=div.statusref<datalist><option>css=div.statusref</option></datalist></td><td>glob:*Draft*</td></tr>
+<tr><td>verifyTextPresent</td><td>AAA Company<datalist><option>AAA Company</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=valid']<datalist><option>css=a.butAction[href*='action=valid']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a[href*='action=clone']<datalist><option>css=a[href*='action=clone']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a[href*='action=delete']<datalist><option>css=a[href*='action=delete']</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>invUrl0<datalist><option>invUrl0</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_INVOICE-04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${invUrl0}&leftmenu=customers_bills<datalist><option>${invUrl0}&leftmenu=customers_bills</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 line A')]<datalist><option>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 line A')]</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>100.00<datalist><option>100.00</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>20.00<datalist><option>20.00</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>120.00<datalist><option>120.00</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_INVOICE-05</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/card.php?action=create&leftmenu=customers_bills<datalist><option>https://demo.dolibarr.org/compta/facture/card.php?action=create&leftmenu=customers_bills</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=select2-socid-container<datalist><option>id=select2-socid-container</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=span.select2-search.select2-search--dropdown > input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown > input.select2-search__field</option></datalist></td><td>AAA Company</td></tr>
+<tr><td>sendKeys</td><td>css=span.select2-search.select2-search--dropdown > input.select2-search__field<datalist><option>css=span.select2-search.select2-search--dropdown > input.select2-search__field</option></datalist></td><td>${KEY_ENTER}</td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>AAA Company<datalist><option>AAA Company</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-I05</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>AAA Company<datalist><option>AAA Company</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=div.refid > span.valignmiddle<datalist><option>css=div.refid > span.valignmiddle</option></datalist></td><td>glob:*PROV*</td></tr>
+<tr><td>verifyText</td><td>css=div.statusref<datalist><option>css=div.statusref</option></datalist></td><td>glob:*Draft*</td></tr>
+<tr><td>verifyTextPresent</td><td>0.00<datalist><option>0.00</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a[href*='action=clone']<datalist><option>css=a[href*='action=clone']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a[href*='action=delete']<datalist><option>css=a[href*='action=delete']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>css=a.butAction[href*='action=valid']<datalist><option>css=a.butAction[href*='action=valid']</option></datalist></td><td></td></tr>
+<tr><td>storeLocation</td><td>invUrl1<datalist><option>invUrl1</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_INVOICE-06</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${ordUrl2}&leftmenu=orders<datalist><option>${ordUrl2}&leftmenu=orders</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>document.querySelector("a[href*='/compta/facture/card.php'][href*='origin=commande']").click();<datalist><option>document.querySelector("a[href*='/compta/facture/card.php'][href*='origin=commande']").click();</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save<datalist><option>name=save</option></datalist></td><td>10000</td></tr>
+<tr><td>click</td><td>id=radio_deposit<datalist><option>id=radio_deposit</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=valuedeposit<datalist><option>id=valuedeposit</option></datalist></td><td>50</td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-I06</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=div.statusref<datalist><option>css=div.statusref</option></datalist></td><td>glob:*Draft*</td></tr>
+<tr><td>verifyTextPresent</td><td>Deposit invoice<datalist><option>Deposit invoice</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Deposit invoice (50.00<datalist><option>Deposit invoice (50.00</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>${ordRef}<datalist><option>${ordRef}</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>50.00<datalist><option>50.00</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_INVOICE-07</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/card.php?action=create&socid=34<datalist><option>https://demo.dolibarr.org/compta/facture/card.php?action=create&socid=34</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=re<datalist><option>id=re</option></datalist></td><td>99/99/2026</td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-I07</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Date' is required<datalist><option>Field 'Date' is required</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>css=div.refid > span.valignmiddle<datalist><option>css=div.refid > span.valignmiddle</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">ADD_INVOICE-08</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/list.php<datalist><option>https://demo.dolibarr.org/compta/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=button_removefilter_x<datalist><option>name=button_removefilter_x</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>invoiceCountBefore</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/card.php?action=create&leftmenu=customers_bills<datalist><option>https://demo.dolibarr.org/compta/facture/card.php?action=create&leftmenu=customers_bills</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=cancel<datalist><option>name=cancel</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_ref<datalist><option>name=search_ref</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>id=re<datalist><option>id=re</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>${invoiceCountBefore}</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">INVOICE_LINE-01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${invUrl1}&leftmenu=customers_bills<datalist><option>${invUrl1}&leftmenu=customers_bills</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 line 1');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 line 1');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 line 1')]<datalist><option>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 line 1')]</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>120.00<datalist><option>120.00</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=a.butAction[href*='action=valid']<datalist><option>css=a.butAction[href*='action=valid']</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">INVOICE_LINE-02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${invUrl1}&leftmenu=customers_bills<datalist><option>${invUrl1}&leftmenu=customers_bills</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 qty -1');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 qty -1');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>-1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Quantity for line into customer invoices can't be negative<datalist><option>Quantity for line into customer invoices can't be negative</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 qty -1')]<datalist><option>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 qty -1')]</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">INVOICE_LINE-03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${invUrl1}&leftmenu=customers_bills<datalist><option>${invUrl1}&leftmenu=customers_bills</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 discount 101');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 discount 101');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>101</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 discount 101')]<datalist><option>xpath=//table[@id='tablelines']//tr[starts-with(@id,'row-')]/td[contains(@class,'linecoldescription')][contains(.,'QA23130284 discount 101')]</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">INVOICE_LINE-04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/card.php?action=create&socid=34<datalist><option>https://demo.dolibarr.org/compta/facture/card.php?action=create&socid=34</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-I-L04</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>storeLocation</td><td>invUrl2<datalist><option>invUrl2</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 line A');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 line A');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>2</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 line B');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 line B');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>50</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>2</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=10%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>200.00<datalist><option>200.00</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>300.00<datalist><option>300.00</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>50.00<datalist><option>50.00</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>350.00<datalist><option>350.00</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">INVOICE_STATUS-01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${invUrl2}&leftmenu=customers_bills<datalist><option>${invUrl2}&leftmenu=customers_bills</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=valid']<datalist><option>css=a.butAction[href*='action=valid']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Are you sure you want to validate this invoice with the reference<datalist><option>Are you sure you want to validate this invoice with the reference</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='No']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='No']</option></datalist></td><td></td></tr>
+<tr><td>verifyNotVisible</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='No']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='No']</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=div.statusref<datalist><option>css=div.statusref</option></datalist></td><td>glob:*Draft*</td></tr>
+<tr><td>verifyText</td><td>css=div.refid > span.valignmiddle<datalist><option>css=div.refid > span.valignmiddle</option></datalist></td><td>glob:*PROV*</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">INVOICE_STATUS-02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>${invUrl2}&leftmenu=customers_bills<datalist><option>${invUrl2}&leftmenu=customers_bills</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=a.butAction[href*='action=valid']<datalist><option>css=a.butAction[href*='action=valid']</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextNotPresent</td><td>getClearHMACSecretKey Error<datalist><option>getClearHMACSecretKey Error</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=div.refid > span.valignmiddle<datalist><option>css=div.refid > span.valignmiddle</option></datalist></td><td>glob:FA*</td></tr>
+<tr><td>verifyText</td><td>css=div.statusref<datalist><option>css=div.statusref</option></datalist></td><td>glob:*Not paid*</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">INVOICE_STATUS-08</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/card.php?action=create&socid=34<datalist><option>https://demo.dolibarr.org/compta/facture/card.php?action=create&socid=34</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-I-S08</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=div.refid > span.valignmiddle<datalist><option>css=div.refid > span.valignmiddle</option></datalist></td><td>glob:*PROV*</td></tr>
+<tr><td>storeText</td><td>css=div.refid > span.valignmiddle<datalist><option>css=div.refid > span.valignmiddle</option></datalist></td><td>invDelRef</td></tr>
+<tr><td>storeEval</td><td>storedVars['invDelRef'].replace(/[()]/g,'')<datalist><option>storedVars['invDelRef'].replace(/[()]/g,'')</option></datalist></td><td>invDelRefClean</td></tr>
+<tr><td>clickAndWait</td><td>css=a[href*='action=delete']<datalist><option>css=a[href*='action=delete']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Are you sure you want to delete this invoice?<datalist><option>Are you sure you want to delete this invoice?</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']<datalist><option>xpath=//div[contains(@class,'ui-dialog-buttonset')]/button[normalize-space()='Yes']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_ref<datalist><option>name=search_ref</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/list.php<datalist><option>https://demo.dolibarr.org/compta/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=button_removefilter_x<datalist><option>name=button_removefilter_x</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_ref<datalist><option>name=search_ref</option></datalist></td><td>${invDelRefClean}</td></tr>
+<tr><td>clickAndWait</td><td>name=button_search_x<datalist><option>name=button_search_x</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>(0)</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_INVOICE-01</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/card.php?action=create&socid=34<datalist><option>https://demo.dolibarr.org/compta/facture/card.php?action=create&socid=34</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-I-LS1</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=div.refid > span.valignmiddle<datalist><option>css=div.refid > span.valignmiddle</option></datalist></td><td>glob:*PROV*</td></tr>
+<tr><td>storeText</td><td>css=div.refid > span.valignmiddle<datalist><option>css=div.refid > span.valignmiddle</option></datalist></td><td>invListRef</td></tr>
+<tr><td>storeEval</td><td>storedVars['invListRef'].replace(/[()]/g,'')<datalist><option>storedVars['invListRef'].replace(/[()]/g,'')</option></datalist></td><td>invListRefClean</td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/list.php<datalist><option>https://demo.dolibarr.org/compta/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=button_removefilter_x<datalist><option>name=button_removefilter_x</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_ref<datalist><option>name=search_ref</option></datalist></td><td>${invListRefClean}</td></tr>
+<tr><td>clickAndWait</td><td>name=button_search_x<datalist><option>name=button_search_x</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>(1)</td></tr>
+<tr><td>verifyText</td><td>css=table.liste tr.oddeven<datalist><option>css=table.liste tr.oddeven</option></datalist></td><td>glob:*${invListRefClean}*AAA Company*Draft*</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_INVOICE-02</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/list.php<datalist><option>https://demo.dolibarr.org/compta/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=button_removefilter_x<datalist><option>name=button_removefilter_x</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_ref<datalist><option>name=search_ref</option></datalist></td><td>ZZZ-NO-SUCH-REF</td></tr>
+<tr><td>clickAndWait</td><td>name=button_search_x<datalist><option>name=button_search_x</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>(0)</td></tr>
+<tr><td>verifyTextPresent</td><td>No record found<datalist><option>No record found</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_INVOICE-03</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/list.php<datalist><option>https://demo.dolibarr.org/compta/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=button_removefilter_x<datalist><option>name=button_removefilter_x</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//select[@id='search_status']/option[normalize-space()='Draft']<datalist><option>xpath=//select[@id='search_status']/option[normalize-space()='Draft']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//select[@id='search_status']/option[normalize-space()='Not paid']<datalist><option>xpath=//select[@id='search_status']/option[normalize-space()='Not paid']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//select[@id='search_status']/option[normalize-space()='Paid']<datalist><option>xpath=//select[@id='search_status']/option[normalize-space()='Paid']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//select[@id='search_status']/option[normalize-space()='Abandoned']<datalist><option>xpath=//select[@id='search_status']/option[normalize-space()='Abandoned']</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=#search_status option:nth-child(4)<datalist><option>css=#search_status option:nth-child(4)</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>css=#search_status option:nth-child(5)<datalist><option>css=#search_status option:nth-child(5)</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_INVOICE-04</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/list.php<datalist><option>https://demo.dolibarr.org/compta/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=button_removefilter_x<datalist><option>name=button_removefilter_x</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>jQuery("table.liste tr.oddeven input[name='toselect[]']").first().prop('checked', true).trigger('change');<datalist><option>jQuery("table.liste tr.oddeven input[name='toselect[]']").first().prop('checked', true).trigger('change');</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist><option>1000</option></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=input[name='confirmmassaction'][disabled]<datalist><option>css=input[name='confirmmassaction'][disabled]</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>jQuery('#massaction').val('validate').trigger('change');<datalist><option>jQuery('#massaction').val('validate').trigger('change');</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist><option>1000</option></datalist></td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>css=input[name='confirmmassaction'][disabled]<datalist><option>css=input[name='confirmmassaction'][disabled]</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LIST_INVOICE-05</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/card.php?action=create&socid=34<datalist><option>https://demo.dolibarr.org/compta/facture/card.php?action=create&socid=34</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=note_private<datalist><option>id=note_private</option></datalist></td><td>QA23130284-ASM7-I-LS5</td></tr>
+<tr><td>clickAndWait</td><td>name=save<datalist><option>name=save</option></datalist></td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>storeText</td><td>css=div.refid > span.valignmiddle<datalist><option>css=div.refid > span.valignmiddle</option></datalist></td><td>invMassRef</td></tr>
+<tr><td>storeEval</td><td>storedVars['invMassRef'].replace(/[()]/g,'')<datalist><option>storedVars['invMassRef'].replace(/[()]/g,'')</option></datalist></td><td>invMassRefClean</td></tr>
+<tr><td>click</td><td>id=prod_entry_mode_free<datalist><option>id=prod_entry_mode_free</option></datalist></td><td></td></tr>
+<tr><td>select</td><td>id=select_type<datalist><option>id=select_type</option></datalist></td><td>label=Service</td></tr>
+<tr><td>waitForElementPresent</td><td>css=iframe.cke_wysiwyg_frame<datalist><option>css=iframe.cke_wysiwyg_frame</option></datalist></td><td>10000</td></tr>
+<tr><td>runScript</td><td>CKEDITOR.instances['dp_desc'].setData('QA23130284 mass line');<datalist><option>CKEDITOR.instances['dp_desc'].setData('QA23130284 mass line');</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=price_ht<datalist><option>id=price_ht</option></datalist></td><td>100</td></tr>
+<tr><td>type</td><td>id=qty<datalist><option>id=qty</option></datalist></td><td>1</td></tr>
+<tr><td>type</td><td>id=remise_percent<datalist><option>id=remise_percent</option></datalist></td><td>0</td></tr>
+<tr><td>select</td><td>id=tva_tx<datalist><option>id=tva_tx</option></datalist></td><td>label=20%</td></tr>
+<tr><td>clickAndWait</td><td>id=addline<datalist><option>id=addline</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/compta/facture/list.php<datalist><option>https://demo.dolibarr.org/compta/facture/list.php</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>name=button_removefilter_x<datalist><option>name=button_removefilter_x</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=search_ref<datalist><option>name=search_ref</option></datalist></td><td>${invMassRefClean}</td></tr>
+<tr><td>clickAndWait</td><td>name=button_search_x<datalist><option>name=button_search_x</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=span.totalnboflines<datalist><option>css=span.totalnboflines</option></datalist></td><td>(1)</td></tr>
+<tr><td>runScript</td><td>jQuery("table.liste tr.oddeven input[name='toselect[]']").first().prop('checked', true).trigger('change');<datalist><option>jQuery("table.liste tr.oddeven input[name='toselect[]']").first().prop('checked', true).trigger('change');</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist><option>1000</option></datalist></td><td></td></tr>
+<tr><td>runScript</td><td>jQuery('#massaction').val('validate').trigger('change');<datalist><option>jQuery('#massaction').val('validate').trigger('change');</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>1000<datalist><option>1000</option></datalist></td><td></td></tr>
+<tr><td>clickAndWait</td><td>css=input[name='confirmmassaction']<datalist><option>css=input[name='confirmmassaction']</option></datalist></td><td></td></tr>
+<tr><td>verifyTextNotPresent</td><td>getClearHMACSecretKey Error<datalist><option>getClearHMACSecretKey Error</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=table.liste tr.oddeven<datalist><option>css=table.liste tr.oddeven</option></datalist></td><td>glob:*Not paid*</td></tr>
+</tbody></table>
+</body>
+</html>
