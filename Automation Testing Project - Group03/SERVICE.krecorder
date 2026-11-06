@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://demo.dolibarr.org/" />
+<title>SERVICE</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SETUP_LOGIN</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/user/logout.php</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/public/demo/index.php</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=a1profdemoall</td><td></td></tr>
+<tr><td>click</td><td>css=#a1profdemoall a.modulelineshow</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>css=#formprofdemoall input[type=submit]</td><td></td></tr>
+<tr><td>click</td><td>css=#formprofdemoall input[type=submit]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=username</td><td></td></tr>
+<tr><td>type</td><td>id=username</td><td>demo</td></tr>
+<tr><td>type</td><td>id=password</td><td>demo</td></tr>
+<tr><td>click</td><td>css=input.butActionLogin</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//a[contains(@href,'logout.php')]</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>id=username</td><td></td></tr>
+<tr><td>runScript</td><td>return String(Date.now()).slice(-6);</td><td>run</td></tr>
+<tr><td>echo</td><td>RUN ID = ${run}</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_SERVICE-01</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/card.php?leftmenu=service&amp;action=create&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>type</td><td>id=ref</td><td>QA23130372-S01-${run}</td></tr>
+<tr><td>type</td><td>id=label</td><td>Service minimum S01</td></tr>
+<tr><td>click</td><td>name=add</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-S01-${run}</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Service minimum S01</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>For sale</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>For purchase</td><td></td></tr>
+<tr><td>storeLocation</td><td>urlS01</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_SERVICE-02</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/card.php?leftmenu=service&amp;action=create&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>type</td><td>id=ref</td><td>QA23130372-S02-${run}</td></tr>
+<tr><td>type</td><td>id=label</td><td>Software testing consulting</td></tr>
+<tr><td>select</td><td>id=statut</td><td>label=For sale</td></tr>
+<tr><td>select</td><td>id=statut_buy</td><td>label=Not for purchase</td></tr>
+<tr><td>type</td><td>name=duration_value</td><td>2</td></tr>
+<tr><td>select</td><td>id=duration_unit</td><td>label=Day</td></tr>
+<tr><td>type</td><td>name=price</td><td>150</td></tr>
+<tr><td>select</td><td>id=tva_tx</td><td>label=10%</td></tr>
+<tr><td>click</td><td>name=add</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-S02-${run}</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Not for purchase</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>regexp:2\s+Days</td><td></td></tr>
+<tr><td>storeLocation</td><td>urlS02</td><td></td></tr>
+<tr><td>storeEval</td><td>'${urlS02}'.replace('card.php', 'price.php')</td><td>priceS02</td></tr>
+<tr><td>open</td><td>${priceS02}</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>150.00</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>165.00</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_SERVICE-03</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/card.php?leftmenu=service&amp;action=create&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>type</td><td>id=ref</td><td>QA23130372-S03-${run}</td></tr>
+<tr><td>click</td><td>name=add</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Label' is required</td><td></td></tr>
+<tr><td>verifyValue</td><td>id=ref</td><td>QA23130372-S03-${run}</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_SERVICE-04</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/card.php?leftmenu=service&amp;action=create&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>Service without ref</td></tr>
+<tr><td>click</td><td>name=add</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Service ref.' is required</td><td></td></tr>
+<tr><td>verifyValue</td><td>id=label</td><td>Service without ref</td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_SERVICE-05</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/card.php?leftmenu=service&amp;action=create&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>click</td><td>name=add</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Label' is required</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Service ref.' is required</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_SERVICE-06</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/card.php?leftmenu=service&amp;action=create&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>type</td><td>id=ref</td><td>QA23130372-S01-${run}</td></tr>
+<tr><td>type</td><td>id=label</td><td>Duplicate ref</td></tr>
+<tr><td>click</td><td>name=add</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>already exists</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=add</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_SERVICE-07</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/card.php?leftmenu=service&amp;action=create&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>type</td><td>id=ref</td><td>QA23130372-S07-${run}-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR</td></tr>
+<tr><td>type</td><td>id=label</td><td>Boundary 128</td></tr>
+<tr><td>click</td><td>name=add</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-S07-${run}-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_SERVICE-08</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/card.php?leftmenu=service&amp;action=create&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>type</td><td>id=ref</td><td>QA23130372-S08-${run}-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRX</td></tr>
+<tr><td>verifyAttribute</td><td>id=ref@maxlength</td><td>128</td></tr>
+<tr><td>click</td><td>name=cancel</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_SERVICE-09</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/card.php?leftmenu=service&amp;action=create&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>type</td><td>id=ref</td><td>QA23130372 S09 ${run}</td></tr>
+<tr><td>type</td><td>id=label</td><td>Ref with spaces</td></tr>
+<tr><td>click</td><td>name=add</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372_S09_${run}</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_SERVICE-10</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/card.php?leftmenu=service&amp;action=create&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>type</td><td>id=ref</td><td>QA23130372-S10-${run}</td></tr>
+<tr><td>type</td><td>id=label</td><td>Negative price</td></tr>
+<tr><td>type</td><td>name=price</td><td>-10</td></tr>
+<tr><td>click</td><td>name=add</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=add</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_SERVICE-11</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/card.php?leftmenu=service&amp;action=create&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>type</td><td>id=ref</td><td>QA23130372-S11-${run}</td></tr>
+<tr><td>type</td><td>id=label</td><td>Cancelled service</td></tr>
+<tr><td>click</td><td>name=cancel</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>QA23130372-S11-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LIST_SERVICE-01</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Services</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_barcode</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_tosell</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=search_tobuy</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Product ref.</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Status (Purchase)</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LIST_SERVICE-02</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>QA23130372-S01-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-S01-${run}')]</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-S02-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LIST_SERVICE-03</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>type</td><td>name=search_label</td><td>Software testing consulting</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-S02-${run}')]</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-S01-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LIST_SERVICE-04</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>${run}</td></tr>
+<tr><td>select</td><td>name=search_tobuy</td><td>label=Not for purchase</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-S02-${run}')]</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-S01-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LIST_SERVICE-05</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>ZZZ-NO-SERVICE-999</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LIST_SERVICE-06</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlS02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>open</td><td>${urlS02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-S02-${run}</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>For sale</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Not for purchase</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>regexp:2\s+Days</td><td></td></tr>
+<tr><td>open</td><td>${priceS02}</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>150.00</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_SERVICE-01</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlS02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save</td><td></td></tr>
+<tr><td>verifyValue</td><td>name=ref</td><td>QA23130372-S02-${run}</td></tr>
+<tr><td>verifyValue</td><td>name=label</td><td>Software testing consulting</td></tr>
+<tr><td>verifySelectedLabel</td><td>name=statut</td><td>For sale</td></tr>
+<tr><td>verifySelectedLabel</td><td>name=statut_buy</td><td>Not for purchase</td></tr>
+<tr><td>verifyValue</td><td>name=duration_value</td><td>2</td></tr>
+<tr><td>verifyElementPresent</td><td>name=cancel</td><td></td></tr>
+<tr><td>click</td><td>name=cancel</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_SERVICE-02</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlS02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save</td><td></td></tr>
+<tr><td>type</td><td>name=label</td><td>Software testing consulting - updated</td></tr>
+<tr><td>type</td><td>name=duration_value</td><td>4</td></tr>
+<tr><td>click</td><td>name=save</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>open</td><td>${urlS02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Software testing consulting - updated</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>regexp:4\s+Days</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_SERVICE-03</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlS02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save</td><td></td></tr>
+<tr><td>select</td><td>name=statut</td><td>label=Not for sale</td></tr>
+<tr><td>click</td><td>name=save</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Not for sale</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_SERVICE-04</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlS02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save</td><td></td></tr>
+<tr><td>type</td><td>name=label</td><td></td></tr>
+<tr><td>click</td><td>name=save</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Wrong value for reference or label.</td><td></td></tr>
+<tr><td>open</td><td>${urlS02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Software testing consulting - updated</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_SERVICE-05</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlS02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save</td><td></td></tr>
+<tr><td>type</td><td>name=ref</td><td>QA23130372-S01-${run}</td></tr>
+<tr><td>click</td><td>name=save</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>already exists</td><td></td></tr>
+<tr><td>open</td><td>${urlS02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-S02-${run}</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_SERVICE-06</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlS02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save</td><td></td></tr>
+<tr><td>type</td><td>name=label</td><td>NOT-SAVED-LABEL</td></tr>
+<tr><td>click</td><td>name=cancel</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>verifyTextNotPresent</td><td>NOT-SAVED-LABEL</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Software testing consulting - updated</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DELETE_SERVICE-01</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlS01}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete') or @id='action-delete']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Delete a product/service</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Are you sure you want to delete this product/service?</td><td></td></tr>
+<tr><td>verifyVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']</td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DELETE_SERVICE-02</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlS01}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete') or @id='action-delete']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>QA23130372-S01-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-S01-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DELETE_SERVICE-03</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlS01}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete') or @id='action-delete']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>deleted from database</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>QA23130372-S01-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DELETE_SERVICE-04</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>click</td><td>xpath=//tr[.//a[contains(normalize-space(),'QA23130372-S07-${run}-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR')]]//input[contains(@class,'checkforselect')]</td><td></td></tr>
+<tr><td>click</td><td>xpath=//tr[.//a[contains(normalize-space(),'QA23130372_S09_${run}')]]//input[contains(@class,'checkforselect')]</td><td></td></tr>
+<tr><td>select</td><td>name=massaction</td><td>label=Delete</td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>name=confirmmassaction</td><td></td></tr>
+<tr><td>click</td><td>name=confirmmassaction</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=confirm</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Bulk Delete confirmation</td><td></td></tr>
+<tr><td>select</td><td>id=confirm</td><td>label=No</td></tr>
+<tr><td>click</td><td>css=input.confirmvalidatebutton</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-S07-${run}-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR')]</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372_S09_${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DELETE_SERVICE-05</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>click</td><td>xpath=//tr[.//a[contains(normalize-space(),'QA23130372-S07-${run}-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR')]]//input[contains(@class,'checkforselect')]</td><td></td></tr>
+<tr><td>click</td><td>xpath=//tr[.//a[contains(normalize-space(),'QA23130372_S09_${run}')]]//input[contains(@class,'checkforselect')]</td><td></td></tr>
+<tr><td>select</td><td>name=massaction</td><td>label=Delete</td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>name=confirmmassaction</td><td></td></tr>
+<tr><td>click</td><td>name=confirmmassaction</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=confirm</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Bulk Delete confirmation</td><td></td></tr>
+<tr><td>select</td><td>id=confirm</td><td>label=Yes</td></tr>
+<tr><td>click</td><td>css=input.confirmvalidatebutton</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>2 record(s) deleted</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-S07-${run}-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR')]</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372_S09_${run}')]</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-S02-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TEARDOWN_SERVICE</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>click</td><td>id=checkforselects</td><td></td></tr>
+<tr><td>select</td><td>name=massaction</td><td>label=Delete</td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>name=confirmmassaction</td><td></td></tr>
+<tr><td>click</td><td>name=confirmmassaction</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=confirm</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Bulk Delete confirmation</td><td></td></tr>
+<tr><td>select</td><td>id=confirm</td><td>label=Yes</td></tr>
+<tr><td>click</td><td>css=input.confirmvalidatebutton</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TEARDOWN_LOGOUT</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/user/logout.php</td><td></td></tr>
+<tr><td>pause</td><td>2000</td><td></td></tr>
+<tr><td>echo</td><td>Finished RUN ID = ${run}</td><td></td></tr>
+</tbody></table>
+</body>
+</html>

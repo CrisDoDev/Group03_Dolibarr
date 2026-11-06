@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://demo.dolibarr.org/" />
+<title>CATEGORY</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SETUP_LOGIN</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/user/logout.php</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/public/demo/index.php</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=a1profdemoall</td><td></td></tr>
+<tr><td>click</td><td>css=#a1profdemoall a.modulelineshow</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>css=#formprofdemoall input[type=submit]</td><td></td></tr>
+<tr><td>click</td><td>css=#formprofdemoall input[type=submit]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=username</td><td></td></tr>
+<tr><td>type</td><td>id=username</td><td>demo</td></tr>
+<tr><td>type</td><td>id=password</td><td>demo</td></tr>
+<tr><td>click</td><td>css=input.butActionLogin</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//a[contains(@href,'logout.php')]</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>id=username</td><td></td></tr>
+<tr><td>runScript</td><td>return String(Date.now()).slice(-6);</td><td>run</td></tr>
+<tr><td>echo</td><td>RUN ID = ${run}</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_CATEGORY-01</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/card.php?action=create&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>QA23130372-T01-${run}</td></tr>
+<tr><td>click</td><td>name=creation</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>storeLocation</td><td>urlT01</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-T01-${run}</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Root</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete') or @id='action-delete']</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_CATEGORY-02</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/card.php?action=create&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>QA23130372-T02-${run}</td></tr>
+<tr><td>type</td><td>id=colorpickercolor</td><td>FF0000</td></tr>
+<tr><td>type</td><td>id=position</td><td>5</td></tr>
+<tr><td>click</td><td>name=creation</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>storeLocation</td><td>urlT02</td><td></td></tr>
+<tr><td>verifyValue</td><td>xpath=//input[contains(@class,'colorthumb')]</td><td>ff0000</td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//td[normalize-space()='Position']/following-sibling::td[normalize-space()='5']</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_CATEGORY-03</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/card.php?action=create&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>QA23130372-T03-${run}</td></tr>
+<tr><td>select</td><td>id=parent</td><td>label=QA23130372-T01-${run}</td></tr>
+<tr><td>click</td><td>name=creation</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>storeLocation</td><td>urlT03</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-T03-${run}</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T01-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_CATEGORY-04</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/card.php?action=create&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>click</td><td>name=creation</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Ref.' is required</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=creation</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_CATEGORY-05</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/card.php?action=create&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>QA23130372-T01-${run}</td></tr>
+<tr><td>click</td><td>name=creation</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>This category already exists with this ref</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=creation</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_CATEGORY-06</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/card.php?action=create&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>qa23130372-t01-${run}</td></tr>
+<tr><td>click</td><td>name=creation</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>This category already exists with this ref</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_CATEGORY-07</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/card.php?action=create&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>QA23130372-T03-${run}</td></tr>
+<tr><td>click</td><td>name=creation</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>storeLocation</td><td>urlT03root</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-T03-${run}</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T01-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_CATEGORY-08</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/card.php?action=create&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>QA23130372-T08-${run}-LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL</td></tr>
+<tr><td>click</td><td>name=creation</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>storeLocation</td><td>urlT08</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-T08-${run}-LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_CATEGORY-09</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/card.php?action=create&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>QA23130372-T09-${run}-LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL</td></tr>
+<tr><td>click</td><td>name=creation</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=creation</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/categorie_list.php?mode=common&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>type</td><td>name=search_label</td><td>QA23130372-T09-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ADD_CATEGORY-10</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/card.php?action=create&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=label</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>QA23130372-T10-${run}</td></tr>
+<tr><td>click</td><td>name=cancel</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/categorie_list.php?mode=common&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>type</td><td>name=search_label</td><td>QA23130372-T10-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LIST_CATEGORY-01</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/index.php?leftmenu=cat&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Number of tags/categories</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Products and Services</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Contacts/Addresses</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LIST_CATEGORY-02</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/categorie_list.php?mode=hierarchy&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T01-${run}')]</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T03-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LIST_CATEGORY-03</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/categorie_list.php?mode=common&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>type</td><td>name=search_label</td><td>QA23130372-T02-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T02-${run}')]</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T01-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LIST_CATEGORY-04</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/categorie_list.php?mode=common&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>type</td><td>name=search_label</td><td>${run}</td></tr>
+<tr><td>type</td><td>name=search_color</td><td>FF0000</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T02-${run}')]</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T01-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LIST_CATEGORY-05</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT01}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Sub-categories</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T03-${run}')]</td><td></td></tr>
+<tr><td>click</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T03-${run}')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T01-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_CATEGORY-01</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save</td><td></td></tr>
+<tr><td>verifyValue</td><td>id=label</td><td>QA23130372-T02-${run}</td></tr>
+<tr><td>verifyValue</td><td>id=position</td><td>5</td></tr>
+<tr><td>verifyElementPresent</td><td>id=parent</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>name=cancel</td><td></td></tr>
+<tr><td>click</td><td>name=cancel</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_CATEGORY-02</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>QA23130372-T02U-${run}</td></tr>
+<tr><td>type</td><td>id=position</td><td>7</td></tr>
+<tr><td>click</td><td>name=save</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-T02U-${run}</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//td[normalize-space()='Position']/following-sibling::td[normalize-space()='7']</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_CATEGORY-03</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save</td><td></td></tr>
+<tr><td>select</td><td>id=parent</td><td>label=QA23130372-T01-${run}</td></tr>
+<tr><td>click</td><td>name=save</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T01-${run}')]</td><td></td></tr>
+<tr><td>open</td><td>${urlT01}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T02U-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_CATEGORY-04</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT01}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=parent</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//select[@id='parent']/option[contains(.,'QA23130372-T01-${run}')]</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//select[@id='parent']/option[contains(.,'QA23130372-T02U-${run}')]</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//select[@id='parent']/option[contains(.,'QA23130372-T08-${run}-LLLLLLLL')]</td><td></td></tr>
+<tr><td>click</td><td>name=cancel</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_CATEGORY-05</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td></td></tr>
+<tr><td>click</td><td>name=save</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Field 'Label' is required</td><td></td></tr>
+<tr><td>open</td><td>${urlT02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-T02U-${run}</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_CATEGORY-06</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>QA23130372-T03-${run}</td></tr>
+<tr><td>click</td><td>name=save</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>This category already exists with this ref</td><td></td></tr>
+<tr><td>verifyTextNotPresent</td><td>ImpossibleUpdateCat</td><td></td></tr>
+<tr><td>open</td><td>${urlT02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-T02U-${run}</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_CATEGORY-07</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=save</td><td></td></tr>
+<tr><td>type</td><td>id=label</td><td>NOT-SAVED-TAG</td></tr>
+<tr><td>click</td><td>name=cancel</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>verifyTextNotPresent</td><td>NOT-SAVED-TAG</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-T02U-${run}</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_CATEGORY-08</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/card.php?leftmenu=service&amp;action=create&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=ref</td><td></td></tr>
+<tr><td>type</td><td>id=ref</td><td>QA23130372-S99-${run}</td></tr>
+<tr><td>type</td><td>id=label</td><td>Tagged service</td></tr>
+<tr><td>addSelection</td><td>id=categories</td><td>label=QA23130372-T01-${run}</td></tr>
+<tr><td>click</td><td>name=add</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=edit')]</td><td></td></tr>
+<tr><td>storeLocation</td><td>urlS99</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-T01-${run}</td><td></td></tr>
+<tr><td>open</td><td>${urlT01}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-S99-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EDIT_CATEGORY-09</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT01}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//tr[.//a[contains(normalize-space(),'QA23130372-S99-${run}')]]//a[contains(@href,'action=unlink')]</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'categories/edit.php')]</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(normalize-space(),'QA23130372-S99-${run}')]</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>This category does not contain any items.</td><td></td></tr>
+<tr><td>open</td><td>${urlS99}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-S99-${run}</td><td></td></tr>
+<tr><td>verifyTextNotPresent</td><td>QA23130372-T01-${run}</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DELETE_CATEGORY-01</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT08}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete') or @id='action-delete']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Delete tag/category</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Are you sure you want to delete this tag/category?</td><td></td></tr>
+<tr><td>verifyVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']</td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DELETE_CATEGORY-02</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT08}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete') or @id='action-delete']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='No']</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/categorie_list.php?mode=common&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>type</td><td>name=search_label</td><td>QA23130372-T08-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T08-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DELETE_CATEGORY-03</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT08}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete') or @id='action-delete']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/categorie_list.php?mode=common&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>type</td><td>name=search_label</td><td>QA23130372-T08-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DELETE_CATEGORY-04</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT01}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete') or @id='action-delete']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextNotPresent</td><td>Duplicate entry</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DELETE_CATEGORY-05</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>${urlT03root}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete') or @id='action-delete']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>open</td><td>${urlT01}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'tabsAction')]//a[contains(@href,'action=delete') or @id='action-delete']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']</td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[contains(@class,'ui-dialog')]//button[normalize-space()='Yes']</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>open</td><td>${urlT03}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-T03-${run}</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T01-${run}')]</td><td></td></tr>
+<tr><td>open</td><td>${urlT02}&amp;t=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>QA23130372-T02U-${run}</td><td></td></tr>
+<tr><td>verifyElementNotPresent</td><td>xpath=//a[contains(@href,'viewcat.php') and contains(normalize-space(),'QA23130372-T01-${run}')]</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DELETE_CATEGORY-06</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/categorie_list.php?mode=common&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>type</td><td>name=search_label</td><td>${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>click</td><td>id=checkforselects</td><td></td></tr>
+<tr><td>select</td><td>name=massaction</td><td>label=Delete</td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>name=confirmmassaction</td><td></td></tr>
+<tr><td>click</td><td>name=confirmmassaction</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=confirm</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Bulk Delete confirmation</td><td></td></tr>
+<tr><td>select</td><td>id=confirm</td><td>label=Yes</td></tr>
+<tr><td>click</td><td>css=input.confirmvalidatebutton</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>record(s) deleted</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/categories/categorie_list.php?mode=common&amp;type=product</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>type</td><td>name=search_label</td><td>${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_label</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TEARDOWN_CATEGORY</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>QA23130372-S99-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>click</td><td>id=checkforselects</td><td></td></tr>
+<tr><td>select</td><td>name=massaction</td><td>label=Delete</td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForVisible</td><td>name=confirmmassaction</td><td></td></tr>
+<tr><td>click</td><td>name=confirmmassaction</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=confirm</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Bulk Delete confirmation</td><td></td></tr>
+<tr><td>select</td><td>id=confirm</td><td>label=Yes</td></tr>
+<tr><td>click</td><td>css=input.confirmvalidatebutton</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>id=id-right</td><td></td></tr>
+<tr><td>open</td><td>https://demo.dolibarr.org/product/list.php?leftmenu=service&amp;type=1</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>type</td><td>name=search_ref</td><td>QA23130372-S99-${run}</td></tr>
+<tr><td>click</td><td>name=button_search_x</td><td></td></tr>
+<tr><td>pause</td><td>1000</td><td></td></tr>
+<tr><td>waitForElementPresent</td><td>name=search_ref</td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>No record found</td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TEARDOWN_LOGOUT</td></tr>
+</thead><tbody>
+<tr><td>open</td><td>https://demo.dolibarr.org/user/logout.php</td><td></td></tr>
+<tr><td>pause</td><td>2000</td><td></td></tr>
+<tr><td>echo</td><td>Finished RUN ID = ${run}</td><td></td></tr>
+</tbody></table>
+</body>
+</html>
